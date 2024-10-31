@@ -31,11 +31,16 @@ jupyter notebook ridership.ipynb
 ```
 ### Project Structure
 Namma Metro\-Ridership\-Tracker\/
-├── Namma Metro\_Ridership\_Dataset\.csv    \# Collected ridership dataset \(growing over time\)
-├── ridership\.py                           \# Main Python script for scraping and storing data
-├── ridership\.ipynb                        \# Jupyter Notebook for exploratory data analysis
-├── requirements\.txt                       \# Required Python packages
-└── README\.md                              \# Project documentation
+├── Namma Metro\_Ridership\_Dataset\.csv
+    \# Collected ridership dataset \(growing over time\)
+├── ridership\.py                           
+    \# Main Python script for scraping and storing data
+├── ridership\.ipynb                        
+    \# Jupyter Notebook for exploratory data analysis
+├── requirements\.txt                       
+    \# Required Python packages
+└── README\.md                              
+    \# Project documentation
 ### Dataset
 **NammaMetro\_Ridership\_Dataset\.csv** is updated daily with each row representing a new day’s ridership statistics\. Columns include\:
 *Record Date \| Total Smart Cards \| Stored Value Card \| One Day Pass \| Three Day Pass \| Five Day Pass \| Tokens \| Total NCMC \| Group Ticket \| Total QR \| QR NammaMetro \| QR WhatsApp \| QR Paytm*
