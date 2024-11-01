@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException, ElementClickInterceptedException
 from pathlib import Path
 import time
 
@@ -34,9 +34,9 @@ try:
     # Attempt to click on Kannada toggle button
     try:
         toggle_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "link.top-navcustom-text")))
+        time.sleep(10)  # Allow extra time for JavaScript to load translated data
         toggle_button.click()
-        time.sleep(5)  # Allow extra time for JavaScript to load translated data
-    except (NoSuchElementException, TimeoutException):
+    except (NoSuchElementException, TimeoutException, ElementClickInterceptedException):
         print("Error: Language toggle button not found or clickable.")
         driver.quit()
         exit(1)
