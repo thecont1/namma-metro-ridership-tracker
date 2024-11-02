@@ -1,0 +1,5 @@
+PATH=/opt/anaconda3/envs/scala/bin:/usr/local/bin:/usr/bin:/bin
+PYTHONPATH=/opt/anaconda3/envs/scala/lib/python3.8
+37 17 * * * /opt/anaconda3/envs/scala/bin/python3 /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/ridership.py >> /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/cron_log.txt 2>&1 && echo "--|  Cron job fired at $(date)  |--" >> /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/cron_log.txt
+59 20 * * * /opt/anaconda3/envs/scala/bin/python3 /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/ridership.py >> /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/cron_log.txt 2>&1 && echo "--|  Cron job fired at $(date)  |--" >> /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/cron_log.txt
+23 1 * * * /opt/anaconda3/envs/scala/bin/python3 /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/ridership.py >> /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/cron_log.txt 2>&1 && echo "--|  Cron job fired at $(date)  |--" >> /Users/home/DEV/scaler/python/public/namma-metro-ridership-tracker/cron_log.txt
