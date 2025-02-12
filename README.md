@@ -2,7 +2,7 @@
 
 <p *style*="background-color: #FFCCCC; padding: 10px;">Under Testing (🗓️Jan-29):</p>
 
-- We have a [mybinder.org notebook](https://mybinder.org/v2/gh/thecont1/namma-metro-ridership-tracker/6944de31ced73db30bbea90cacffd797a099fb32?urlpath=lab%2Ftree%2Fridership_2analysis.ipynb) for you to checkout. It runs `ridership_2analysis.ipynb`.
+- We have a [mybinder.org notebook](https://mybinder.org/v2/gh/thecont1/namma-metro-ridership-tracker/main?urlpath=lab%2Ftree%2Fridership_2analysis.ipynb) for you to checkout. It runs `ridership_2analysis.ipynb`.
 
 ### Overview
 _____
