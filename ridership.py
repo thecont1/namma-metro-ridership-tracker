@@ -75,6 +75,7 @@ try:
         exit(1)
 
     day_record = pd.DataFrame(day_record)
+    day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
 
 finally:
     driver.quit()
