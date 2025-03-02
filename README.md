@@ -9,7 +9,7 @@ _____
 The Bangalore Metro Rail Corporation Limited (BMRCL) publishes [daily ridership data](https://www.bmrc.co.in/ridership/) every 24 hours. Unfortunately, they do not provide historical data beyond one day. This repository contains a Python script and Jupyter Notebook to automate the process of downloading ridership data from BMRCL and storing it in a csv file. As the dataset evolves over time\, it will allow for analysis of ridership and usage patterns.
 
 <figure>
-    <img src="./nammametro_networkmap.jpg" width="1000" height="802" alt="The Namma Metro rail network of Bangalore"/>
+    <img src="./images/nammametro_networkmap.jpg" width="1000" height="802" alt="The Namma Metro rail network of Bangalore"/>
     <figcaption>Namma Metro rail network of Bangalore circa November 2024. Source: www.bmrc.co.in</figcaption>
 </figure>
 
