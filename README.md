@@ -60,13 +60,13 @@ requirements.txt includes `selenium` and `pandas`
 To collect the latest ridership data, run:
 
 ```shell
-    python ridership.py
+    >python ridership.py
 ```
 
 The Python program will automatically check for an existing dataset file `Namma Metro_Ridership_Dataset.csv`, create one if necessary, and append the current day's data row. The Jupyter Notebook version `ridership.ipynb` does exactly what the program does but allows you to follow along step-by-step. Open it with:
 
 ```shell
-    jupyter notebook ridership.ipynb
+    >jupyter notebook ridership_1data.ipynb
 ```
 
 ## Setup cronjob.sh (Optional)
