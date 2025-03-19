@@ -15,9 +15,12 @@ import logging
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format='- %(message)s'
 )
 logger = logging.getLogger(__name__)
+
+# Print script run time
+print(f"Script run time: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
 
 # Selenium options required to create a 'headless' browser
 options = Options()
@@ -91,12 +94,15 @@ try:
                     try:
                         # Try to convert to integer, but handle non-numeric data gracefully
                         day_record[data[0]] = [int(data[1].replace(',', ''))]
-                        logger.info(f"Extracted data: {data[0]} = {data[1]}")
+                        # Simplified logging - removed detailed extraction logs
+                        pass
                     except ValueError:
-                        logger.warning(f"Non-numeric value found: {data[0]} = {data[1]}")
+                        # Simplified logging - removed warnings for non-numeric values
+                        pass
                         day_record[data[0]] = [data[1]]
                 else:
-                    logger.warning(f"Unexpected data format in line '{l2}'")
+                    # Simplified logging - removed warnings for unexpected formats
+                    pass
     except (NoSuchElementException, TimeoutException, ValueError) as e:
         logger.error(f"Error while parsing data points: {e}")
         driver.quit()
@@ -106,7 +112,10 @@ try:
     if 'Tokens' in day_record.columns:
         day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
     
-    logger.info(f"Data collected: {day_record.to_string()}")
+    logger.info("Data row collected:   \n")
+    # Print the dataframe in a more readable format
+    print(day_record.to_string(index=False))
+    print()
 
 finally:
     driver.quit()
@@ -119,12 +128,20 @@ logger.info(f"CSV file path: {filename}")
 
 # Store data in csv file - create file if necessary
 try:
+    # Convert all numeric values to integers before saving
+    for column in day_record.columns:
+        if column != 'Record Date':  # Skip the date column
+            try:
+                day_record[column] = day_record[column].astype(int)
+            except (ValueError, TypeError):
+                pass
+    
     if filename.exists() and filename.is_file():
         logger.info("Appending to existing CSV file")
-        day_record.to_csv(filename, mode='a', header=False, index=False)
+        day_record.to_csv(filename, mode='a', header=False, index=False, lineterminator='\n')
     else:
         logger.info("Creating new CSV file")
-        day_record.to_csv(filename, mode='w', header=True, index=False)
+        day_record.to_csv(filename, mode='w', header=True, index=False, lineterminator='\n')
 except IOError as e:
     logger.error(f"Error writing to CSV file: {e}")
     exit(1)
@@ -133,10 +150,21 @@ except IOError as e:
 try:
     logger.info("Optimizing dataset (removing duplicates)")
     df = pd.read_csv(filename).drop_duplicates(subset=['Record Date'], keep='last')
-    df.to_csv(filename, index=False)
+    
+    # Convert all numeric columns to integers
+    for column in df.columns:
+        if column != 'Record Date':  # Skip the date column
+            try:
+                df[column] = df[column].astype(int)
+            except (ValueError, TypeError):
+                pass
+    
+    logger.info("Converted numerical columns to integer type")
+    
+    # Save without trailing commas
+    df.to_csv(filename, index=False, lineterminator='\n')
     logger.info(f"Final dataset has {len(df)} records")
+    logger.info("Data successfully saved and optimized. Thank you, goodbye!")
 except IOError as e:
     logger.error(f"Error optimizing CSV file: {e}")
     exit(1)
-
-logger.info("Data successfully saved and optimized.")
