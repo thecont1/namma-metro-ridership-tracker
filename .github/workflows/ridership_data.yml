@@ -53,32 +53,53 @@ jobs:
     
     - name: Install ChromeDriver
       run: |
-        mkdir -p ~/.cache/chromedriver
-        # Get Chrome version with better error handling
+        # Get Chrome version
         CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
         echo "Detected Chrome version: $CHROME_VERSION"
         
-        # Get matching ChromeDriver version
-        CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-        echo "Matching ChromeDriver version: $CHROMEDRIVER_VERSION"
-        
-        if [ -z "$CHROMEDRIVER_VERSION" ]; then
-          echo "Failed to get ChromeDriver version. Using latest stable version instead."
-          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
-          echo "Using latest stable ChromeDriver: $CHROMEDRIVER_VERSION"
+        # Check if Chrome version is 115 or higher (new distribution method)
+        if [ "$CHROME_VERSION" -ge 115 ]; then
+          echo "Using new ChromeDriver distribution for Chrome $CHROME_VERSION"
+          
+          # Get the latest driver version for this Chrome version
+          LATEST_DRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_$CHROME_VERSION")
+          echo "Latest driver version: $LATEST_DRIVER_VERSION"
+          
+          # Download ChromeDriver from the new location
+          DOWNLOAD_URL="https://storage.googleapis.com/chrome-for-testing-public/$LATEST_DRIVER_VERSION/linux64/chromedriver-linux64.zip"
+          echo "Downloading from: $DOWNLOAD_URL"
+          curl -L -o /tmp/chromedriver.zip "$DOWNLOAD_URL"
+          
+          # Extract with the new directory structure
+          unzip -o /tmp/chromedriver.zip -d /tmp
+          
+          # Move the binary to the right location
+          chmod +x /tmp/chromedriver-linux64/chromedriver
+          sudo mv /tmp/chromedriver-linux64/chromedriver /usr/local/bin/
+        else
+          echo "Using legacy ChromeDriver distribution for Chrome $CHROME_VERSION"
+          
+          # Get matching ChromeDriver version (legacy method)
+          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+          echo "Matching ChromeDriver version: $CHROMEDRIVER_VERSION"
+          
+          if [ -z "$CHROMEDRIVER_VERSION" ]; then
+            echo "Failed to get ChromeDriver version. Using latest stable version instead."
+            CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
+            echo "Using latest stable ChromeDriver: $CHROMEDRIVER_VERSION"
+          fi
+          
+          # Download and install ChromeDriver (legacy method)
+          echo "Downloading ChromeDriver version $CHROMEDRIVER_VERSION..."
+          curl -L -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+          
+          # Extract and install
+          unzip -o /tmp/chromedriver.zip -d /tmp
+          chmod +x /tmp/chromedriver
+          sudo mv /tmp/chromedriver /usr/local/bin/
         fi
         
-        # Download and install ChromeDriver
-        echo "Downloading ChromeDriver version $CHROMEDRIVER_VERSION..."
-        curl -L -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-        
-        echo "Extracting ChromeDriver..."
-        unzip -o /tmp/chromedriver.zip -d /tmp
-        
-        echo "Installing ChromeDriver..."
-        chmod +x /tmp/chromedriver
-        sudo mv /tmp/chromedriver /usr/local/bin/
-        
+        # Verify installation
         echo "Verifying ChromeDriver installation..."
         chromedriver --version || echo "ChromeDriver installation failed"
     
