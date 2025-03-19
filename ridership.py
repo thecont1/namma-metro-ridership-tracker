@@ -9,6 +9,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException, ElementClickInterceptedException
 from pathlib import Path
 import time
+import os
+import logging
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Selenium options required to create a 'headless' browser
 options = Options()
@@ -16,28 +25,36 @@ options.add_argument("--blink-settings=imagesEnabled=false")
 options.add_argument("--headless=new")
 options.add_argument("--disable-gpu")
 options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")  # Added for CI environments
+options.add_argument("--window-size=1920,1080")  # Set a specific window size
 options.add_argument("--incognito")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.77 Safari/537.37")
 
 try:
     driver = webdriver.Chrome(options=options)
     wait = WebDriverWait(driver, 20)  # wait up to 20 seconds for elements to load
+    logger.info("Chrome driver initialized successfully")
 except WebDriverException as e:
-    print("Error initializing the web driver:", e)
+    logger.error(f"Error initializing the web driver: {e}")
     exit(1)
 
-# Load ridership page from BMRCL website
+# Dictionary to store ridership data
+day_record = {}
+
 try:
     # Load ridership page from BMRCL website
+    logger.info("Accessing BMRCL website")
     driver.get("https://english.bmrc.co.in/ridership/")
     
     # Attempt to click on Kannada toggle button
     try:
+        logger.info("Waiting for language toggle button")
         toggle_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "link.top-navcustom-text")))
         time.sleep(10)  # Allow extra time for JavaScript to load translated data
         toggle_button.click()
-    except (NoSuchElementException, TimeoutException, ElementClickInterceptedException):
-        print("Error: Language toggle button not found or clickable.")
+        logger.info("Language toggle button clicked")
+    except (NoSuchElementException, TimeoutException, ElementClickInterceptedException) as e:
+        logger.error(f"Error with language toggle button: {e}")
         driver.quit()
         exit(1)
 
@@ -46,61 +63,80 @@ try:
     try:
         record_date_element = wait.until(EC.visibility_of_element_located((By.TAG_NAME, "h3")))
         record_date = record_date_element.text
-    except (NoSuchElementException, TimeoutException):
-        print("Error: Record date element not found.")
+        logger.info(f"Found record date: {record_date}")
+    except (NoSuchElementException, TimeoutException) as e:
+        logger.error(f"Error finding record date element: {e}")
         driver.quit()
         exit(1)
 
     # Initialize dict to store ridership data
-    day_record = {}
     day_record['Record Date'] = [record_date.split()[-1]]  # Extracting date part
-    print(day_record)
+    
+    # Take a screenshot for debugging if running in GitHub Actions
+    if os.environ.get('GITHUB_ACTIONS'):
+        driver.save_screenshot("debug_screenshot.png")
+        logger.info("Debug screenshot saved")
 
     # Parse html for remaining data points and store in pandas dataframe
     try:
+        logger.info("Extracting ridership data")
         data_points = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "features-card.achivement-area.bg-color")))
         if not data_points:
-            print("Warning: No ridership data elements found.")
+            logger.warning("No ridership data elements found")
         
         for l1 in data_points:
             for l2 in l1.text.split('\n'):
                 data = l2.split(': ')
                 if len(data) == 2:
-                    day_record[data[0]] = [int(data[1])]
+                    try:
+                        # Try to convert to integer, but handle non-numeric data gracefully
+                        day_record[data[0]] = [int(data[1].replace(',', ''))]
+                        logger.info(f"Extracted data: {data[0]} = {data[1]}")
+                    except ValueError:
+                        logger.warning(f"Non-numeric value found: {data[0]} = {data[1]}")
+                        day_record[data[0]] = [data[1]]
                 else:
-                    print(f"Warning: Unexpected data format in line '{l2}'")
+                    logger.warning(f"Unexpected data format in line '{l2}'")
     except (NoSuchElementException, TimeoutException, ValueError) as e:
-        print("Error while parsing data points:", e)
+        logger.error(f"Error while parsing data points: {e}")
         driver.quit()
         exit(1)
 
     day_record = pd.DataFrame(day_record)
-    day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
+    if 'Tokens' in day_record.columns:
+        day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
+    
+    logger.info(f"Data collected: {day_record.to_string()}")
 
 finally:
     driver.quit()
+    logger.info("Browser closed")
 
 # Locate CSV file in the same directory as the script
 script_dir = Path(__file__).parent
-filename = script_dir / "NammaMetro_Ridership_Dataset.csv"  
-print(filename)
+filename = script_dir / "NammaMetro_Ridership_Dataset.csv"
+logger.info(f"CSV file path: {filename}")
 
 # Store data in csv file - create file if necessary
 try:
     if filename.exists() and filename.is_file():
-        day_record.to_csv(filename, mode='a', header=False)
+        logger.info("Appending to existing CSV file")
+        day_record.to_csv(filename, mode='a', header=False, index=False)
     else:
-        day_record.to_csv(filename, mode='w', header=True)
+        logger.info("Creating new CSV file")
+        day_record.to_csv(filename, mode='w', header=True, index=False)
 except IOError as e:
-    print("Error writing to CSV file:", e)
+    logger.error(f"Error writing to CSV file: {e}")
     exit(1)
 
 # Optimize dataset by removing duplicates and rewrite
 try:
-    df = pd.read_csv(filename, index_col=0).drop_duplicates(keep='last', ignore_index=True)
-    df.to_csv(filename, mode='w', header=True)
+    logger.info("Optimizing dataset (removing duplicates)")
+    df = pd.read_csv(filename).drop_duplicates(subset=['Record Date'], keep='last')
+    df.to_csv(filename, index=False)
+    logger.info(f"Final dataset has {len(df)} records")
 except IOError as e:
-    print("Error optimizing CSV file:", e)
+    logger.error(f"Error optimizing CSV file: {e}")
     exit(1)
 
-print("Data successfully saved and optimized.")
+logger.info("Data successfully saved and optimized.")

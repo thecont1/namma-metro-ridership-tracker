@@ -1,0 +1,63 @@
+name: NammaMetro Ridership Data Collection
+
+on:
+  schedule:
+    # Run at specific times (UTC) - adjust as needed
+    - cron: '33 7 * * *'  # 07:33 UTC / 13:03 IST
+    - cron: '7 12 * * *'  # 12:07 UTC / 17:37 IST
+    - cron: '22 17 * * *' # 17:22 UTC / 20:52 IST
+  workflow_dispatch:  # Allows manual trigger for testing
+
+jobs:
+  collect-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+      with:
+        # Full git history needed to track changes and commit back
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install Chrome
+      run: |
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+    
+    - name: Install ChromeDriver
+      run: |
+        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
+        CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+        curl -L -o chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+        unzip chromedriver.zip
+        chmod +x chromedriver
+        sudo mv chromedriver /usr/local/bin/
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # Install Selenium explicitly if not in requirements
+        pip install selenium pandas
+    
+    - name: Run ridership data collection
+      run: python ridership.py
+      
+    - name: Configure Git
+      run: |
+        git config --global user.name 'GitHub Actions Bot'
+        git config --global user.email 'actions@github.com'
+        
+    - name: Commit and push changes
+      run: |
+        git add NammaMetro_Ridership_Dataset.csv
+        # Only commit if there are changes
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update ridership data [automated]"
+        git push
