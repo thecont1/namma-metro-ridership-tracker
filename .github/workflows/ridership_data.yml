@@ -158,5 +158,5 @@ jobs:
       run: |
         git add NammaMetro_Ridership_Dataset.csv
         # Only commit if there are changes
-        git diff --quiet && git diff --staged --quiet || git commit -m "Update ridership data [automated]"
+        git diff --quiet && git diff --staged --quiet || git commit -m "daily dataset append [Actions]"
         git push
