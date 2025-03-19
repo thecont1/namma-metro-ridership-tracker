@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '33 7 * * *'  # 07:33 UTC / 13:03 IST
     - cron: '7 12 * * *'  # 12:07 UTC / 17:37 IST
-    - cron: '22 17 * * *' # 17:22 UTC / 20:52 IST
+    - cron: '22 17 * * *' # 17:22 UTC / 22:52 IST
   workflow_dispatch:  # Allows manual trigger for testing
 
 jobs:
@@ -53,16 +53,34 @@ jobs:
     
     - name: Install ChromeDriver
       run: |
-        if [ ! -f ~/.cache/chromedriver/chromedriver ]; then
-          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
-          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          curl -L -o chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-          unzip chromedriver.zip
-          chmod +x chromedriver
-          mkdir -p ~/.cache/chromedriver
-          mv chromedriver ~/.cache/chromedriver/
+        mkdir -p ~/.cache/chromedriver
+        # Get Chrome version with better error handling
+        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
+        echo "Detected Chrome version: $CHROME_VERSION"
+        
+        # Get matching ChromeDriver version
+        CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+        echo "Matching ChromeDriver version: $CHROMEDRIVER_VERSION"
+        
+        if [ -z "$CHROMEDRIVER_VERSION" ]; then
+          echo "Failed to get ChromeDriver version. Using latest stable version instead."
+          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
+          echo "Using latest stable ChromeDriver: $CHROMEDRIVER_VERSION"
         fi
-        sudo cp ~/.cache/chromedriver/chromedriver /usr/local/bin/
+        
+        # Download and install ChromeDriver
+        echo "Downloading ChromeDriver version $CHROMEDRIVER_VERSION..."
+        curl -L -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+        
+        echo "Extracting ChromeDriver..."
+        unzip -o /tmp/chromedriver.zip -d /tmp
+        
+        echo "Installing ChromeDriver..."
+        chmod +x /tmp/chromedriver
+        sudo mv /tmp/chromedriver /usr/local/bin/
+        
+        echo "Verifying ChromeDriver installation..."
+        chromedriver --version || echo "ChromeDriver installation failed"
     
     - name: Install dependencies
       run: |
