@@ -32,6 +32,7 @@ jobs:
     
     - name: Cache ChromeDriver
       uses: actions/cache@v3
+      id: chromedriver-cache
       with:
         path: ~/.cache/chromedriver
         key: ${{ runner.os }}-chromedriver-${{ hashFiles('**/.github/workflows/ridership_data.yml') }}
@@ -47,6 +48,9 @@ jobs:
     
     - name: Install ChromeDriver
       run: |
+        # Create cache directory
+        mkdir -p ~/.cache/chromedriver
+        
         # Get Chrome version
         CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
         echo "Detected Chrome version: $CHROME_VERSION"
@@ -67,8 +71,9 @@ jobs:
           # Extract with the new directory structure
           unzip -o /tmp/chromedriver.zip -d /tmp
           
-          # Move the binary to the right location
+          # Move the binary to the right locations
           chmod +x /tmp/chromedriver-linux64/chromedriver
+          cp /tmp/chromedriver-linux64/chromedriver ~/.cache/chromedriver/
           sudo mv /tmp/chromedriver-linux64/chromedriver /usr/local/bin/
         else
           echo "Using legacy ChromeDriver distribution for Chrome $CHROME_VERSION"
@@ -90,8 +95,13 @@ jobs:
           # Extract and install
           unzip -o /tmp/chromedriver.zip -d /tmp
           chmod +x /tmp/chromedriver
+          cp /tmp/chromedriver ~/.cache/chromedriver/
           sudo mv /tmp/chromedriver /usr/local/bin/
         fi
+        
+        # Verify cache directory has content
+        echo "Cache directory contents:"
+        ls -la ~/.cache/chromedriver/
         
         # Verify installation
         echo "Verifying ChromeDriver installation..."
