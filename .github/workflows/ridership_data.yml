@@ -109,7 +109,28 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
     - name: Run ridership data collection
-      run: python ridership.py
+      run: |
+        # Add debugging information
+        echo "Python version:"
+        python --version
+        echo "Installed packages:"
+        pip list
+        echo "Chrome version:"
+        google-chrome --version
+        echo "ChromeDriver version:"
+        chromedriver --version
+        
+        # Run with timeout and error handling
+        echo "Starting ridership data collection..."
+        timeout 300s python -u ridership.py || {
+          echo "Error: ridership.py failed or timed out after 5 minutes"
+          echo "Checking for error logs..."
+          if [ -f selenium_error.log ]; then
+            echo "Selenium error log content:"
+            cat selenium_error.log
+          fi
+          exit 1
+        }
       
     - name: Configure Git
       run: |
