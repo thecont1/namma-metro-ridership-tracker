@@ -1,8 +1,7 @@
-name: NammaMetro Ridership Data Collection
+name: Metro Ridership Data Collection
 
 on:
   schedule:
-    # Run at specific times (UTC) - adjust as needed
     - cron: '33 7 * * *'  # 07:33 UTC / 13:03 IST
     - cron: '7 12 * * *'  # 12:07 UTC / 17:37 IST
     - cron: '22 17 * * *' # 17:22 UTC / 20:52 IST
@@ -16,7 +15,6 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v3
       with:
-        # Full git history needed to track changes and commit back
         fetch-depth: 0
     
     - name: Set up Python
@@ -24,28 +22,52 @@ jobs:
       with:
         python-version: '3.10'
     
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Cache Chrome and ChromeDriver
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/google-chrome
+          ~/.cache/chromedriver
+        key: ${{ runner.os }}-chrome-${{ hashFiles('**/.github/workflows/ridership_data.yml') }}
+    
     - name: Install Chrome
       run: |
-        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
+        if [ ! -f ~/.cache/google-chrome/google-chrome-stable ]; then
+          wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          mkdir -p ~/.cache/google-chrome
+          cp $(which google-chrome-stable) ~/.cache/google-chrome/
+        else
+          sudo cp ~/.cache/google-chrome/google-chrome-stable /usr/bin/
+        fi
     
     - name: Install ChromeDriver
       run: |
-        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
-        CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-        curl -L -o chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-        unzip chromedriver.zip
-        chmod +x chromedriver
-        sudo mv chromedriver /usr/local/bin/
+        if [ ! -f ~/.cache/chromedriver/chromedriver ]; then
+          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
+          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
+          curl -L -o chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+          unzip chromedriver.zip
+          chmod +x chromedriver
+          mkdir -p ~/.cache/chromedriver
+          mv chromedriver ~/.cache/chromedriver/
+        fi
+        sudo cp ~/.cache/chromedriver/chromedriver /usr/local/bin/
     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        # Install Selenium explicitly if not in requirements
-        pip install selenium pandas
     
     - name: Run ridership data collection
       run: python ridership.py
