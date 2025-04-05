@@ -126,45 +126,54 @@ script_dir = Path(__file__).parent
 filename = script_dir / "NammaMetro_Ridership_Dataset.csv"
 logger.info(f"CSV file path: {filename}")
 
-# Store data in csv file - create file if necessary
-try:
-    # Convert all numeric values to integers before saving
-    for column in day_record.columns:
-        if column != 'Record Date':  # Skip the date column
-            try:
-                day_record[column] = day_record[column].astype(int)
-            except (ValueError, TypeError):
-                pass
-    
-    if filename.exists() and filename.is_file():
-        logger.info("Appending to existing CSV file")
-        day_record.to_csv(filename, mode='a', header=False, index=False, lineterminator='\n')
-    else:
-        logger.info("Creating new CSV file")
-        day_record.to_csv(filename, mode='w', header=True, index=False, lineterminator='\n')
-except IOError as e:
-    logger.error(f"Error writing to CSV file: {e}")
-    exit(1)
+# Check if we have valid data before proceeding
+has_valid_data = False
+if 'Record Date' in day_record.columns and len(day_record) > 0:
+    # Check if we have at least some numeric data (not just the date)
+    numeric_columns = [col for col in day_record.columns if col != 'Record Date']
+    if numeric_columns and any(not pd.isna(day_record[col].iloc[0]) for col in numeric_columns):
+        has_valid_data = True
 
-# Optimize dataset by removing duplicates and rewrite
-try:
-    logger.info("Optimizing dataset (removing duplicates)")
-    df = pd.read_csv(filename).drop_duplicates(subset=['Record Date'], keep='last')
-    
-    # Convert all numeric columns to integers
-    for column in df.columns:
-        if column != 'Record Date':  # Skip the date column
-            try:
-                df[column] = df[column].astype(int)
-            except (ValueError, TypeError):
-                pass
-    
-    logger.info("Converted numerical columns to integer type")
-    
-    # Save without trailing commas
-    df.to_csv(filename, index=False, lineterminator='\n')
-    logger.info(f"Final dataset has {len(df)} records")
-    logger.info("Data successfully saved and optimized. Thank you, goodbye!")
-except IOError as e:
-    logger.error(f"Error optimizing CSV file: {e}")
-    exit(1)
+# Store data in csv file only if we have valid data
+if has_valid_data:
+    try:
+        # Convert all numeric values to integers before saving
+        for column in day_record.columns:
+            if column != 'Record Date':  # Skip the date column
+                try:
+                    day_record[column] = day_record[column].astype(int)
+                except (ValueError, TypeError):
+                    pass
+        
+        if filename.exists() and filename.is_file():
+            logger.info("Appending to existing CSV file")
+            day_record.to_csv(filename, mode='a', header=False, index=False, lineterminator='\n')
+        else:
+            logger.info("Creating new CSV file")
+            day_record.to_csv(filename, mode='w', header=True, index=False, lineterminator='\n')
+        
+        # Optimize dataset by removing duplicates and rewrite
+        try:
+            logger.info("Optimizing dataset (removing duplicates)")
+            df = pd.read_csv(filename).drop_duplicates(subset=['Record Date'], keep='last', ignore_index=True)
+            
+            # Convert all numeric columns to integers
+            for column in df.columns:
+                if column != 'Record Date':  # Skip the date column
+                    try:
+                        df[column] = df[column].astype(int)
+                    except (ValueError, TypeError):
+                        pass
+            
+            logger.info("Converted numerical columns to integer type")
+            
+            # Save without trailing commas
+            df.to_csv(filename, mode='w', header=True, index=False, lineterminator='\n')
+            logger.info(f"Final dataset has {len(df)} records")
+            logger.info("Data successfully saved and optimized. Thank you, goodbye!")
+        except IOError as e:
+            logger.error(f"Error optimizing CSV file: {e}")
+            exit(1)
+    except IOError as e:
+        logger.error(f"Error writing to CSV file: {e}")
+        exit(1)
