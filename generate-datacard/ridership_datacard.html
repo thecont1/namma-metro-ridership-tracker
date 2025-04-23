@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Namma Metro Ridership | 04-04-2025</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #a32a8e;   /* Namma Metro purple */
+            --secondary: #2ecc71; /* Fresh green */
+            --accent: #f39c12;    /* Warm orange */ 
+            --ncmc: #ff3333;      /* NCMC cherry */
+            --group: #9b59b6;     /* Group ticket purple */
+            --dark: #2d3748;      /* Dark slate */
+            --light: #f7fafc;     /* Off white */
+            --gray: #a0aec0;      /* Medium gray */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.5;
+            padding: 0;
+            margin: 0;
+        }
+
+        .card {
+            max-width: 600px;
+            margin: 20px auto 20px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+            text-align: center;
+        }
+
+        .header-date {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 10px auto 0;
+            opacity: 0.9;
+            text-align: center;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .total-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .total-passengers {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--dark);
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+
+        .total-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .payment-box {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .payment-box.smartcard {
+            border-left-color: var(--primary);
+        }
+
+        .payment-box.tokens {
+            border-left-color: var(--secondary);
+        }
+
+        .payment-box.qr {
+            border-left-color: #3182ce;
+        }
+
+        .payment-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .payment-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .breakdown {
+            margin-top: 6px;
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .breakdown div {
+            margin-bottom: 2px;
+        }
+
+        .breakdown span {
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        .chart {
+            height: 24px;
+            background: #edf2f7;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            margin: 25px 0;
+        }
+
+        .chart-segment.smartcard {
+            background: var(--primary);
+            width: 52%;
+        }
+
+        .chart-segment.tokens {
+            background: var(--secondary);
+            width: 25%;
+        }
+
+        .chart-segment.qr {
+            background: #3182ce;
+            width: 21%;
+        }
+
+        .chart-segment.ncmc {
+            background: var(--ncmc);
+            width: 1%;
+        }
+
+        .chart-segment.group {
+            background: var(--group);
+            width: 0%;
+        }
+
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: var(--dark);
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            margin-right: 6px;
+        }
+
+        .legend-color.smartcard {
+            background: var(--primary);
+        }
+
+        .legend-color.tokens {
+            background: var(--secondary);
+        }
+
+        .legend-color.qr {
+            background: #3182ce;
+        }
+
+        .legend-color.ncmc {
+            background: var(--ncmc);
+        }
+
+        .legend-color.group {
+            background: var(--group);
+        }
+
+        .footer {  
+            padding-top: 5px;
+            margin-top: 0px; /* Add margin from bottom of screen */
+            text-align: center;
+            font-size: 12px;
+            color: var(--gray);
+            background-color: var(--dark);
+            border-top: 1px solid #edf2f7;
+            position: relative;
+            height: 150px; /* Give enough height for the image */
+        }
+
+        .footer::after {  
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 120px; /* Height of the metro train image */
+            background: url('footer-img.png') no-repeat center bottom;
+            background-size: contain; /* Maintain aspect ratio but fit width */
+            z-index: 1;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .total-passengers {
+                font-size: 40px;
+            }
+
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <h1>Namma Metro Ridership</h1>
+            <div class="logo"></div>
+        </div>
+
+        <div class="content">
+            <div class="date-container" style="text-align: center; margin-bottom: 20px;">
+                <div class="total-label">Date</div>
+                <div class="total-passengers" style="font-size: 32px;">04-04-2025</div>
+            </div>
+
+            <div class="total-container">
+                <div class="total-passengers">802,586</div>
+                <div class="total-label">Total Passengers</div>
+            </div>
+
+            <div class="chart">
+                <div class="chart-segment smartcard"></div>
+                <div class="chart-segment tokens"></div>
+                <div class="chart-segment qr"></div>
+                <div class="chart-segment ncmc"></div>
+                <div class="chart-segment group"></div>
+            </div>
+
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <div class="legend-color smartcard"></div>
+                    <div>Smart Cards 52.2%</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color tokens"></div>
+                    <div>Tokens 25.3%</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color qr"></div>
+                    <div>QR 21.1%</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color ncmc"></div>
+                    <div>NCMC 1.4%</div>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color group"></div>
+                    <div>Group 0.03%</div>
+                </div>
+            </div>
+
+            <div class="payment-grid">
+                <div class="payment-box smartcard">
+                    <div class="payment-value">419,016</div>
+                    <div class="payment-label">Smart Cards</div>
+                    <div class="breakdown">
+                        <div>Stored Value: <span>418,537</span></div>
+                        <div>One Day Pass: <span>136</span></div>
+                        <div>Three Day Pass: <span>36</span></div>
+                        <div>Five Day Pass: <span>307</span></div>
+                    </div>
+                </div>
+
+                <div class="payment-box tokens">
+                    <div class="payment-value">202,926</div>
+                    <div class="payment-label">Tokens</div>
+                </div>
+
+                <div class="payment-box qr">
+                    <div class="payment-value">169,503</div>
+                    <div class="payment-label">QR Tickets</div>
+                    <div class="breakdown">
+                        <div>Namma Metro: <span>47,705</span></div>
+                        <div>WhatsApp: <span>91,362</span></div>
+                        <div>Paytm: <span>30,436</span></div>
+                    </div>
+                </div>
+
+                <div class="payment-box" style="border-left-color: var(--ncmc);">
+                    <div class="payment-value">10,892</div>
+                    <div class="payment-label">NCMC</div>
+                </div>
+
+                <div class="payment-box" style="border-left-color: var(--group);">
+                    <div class="payment-value">249</div>
+                    <div class="payment-label">Group Ticket</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Source: Bangalore Metro Rail Corporation Limited
+        </div>
+    </div>
+</body>
+</html>
