@@ -9,20 +9,46 @@ The Bangalore Metro Rail Corporation Limited (BMRCL) publishes [daily ridership 
 ![The Namma Metro rail network of Bangalore](./images/nammametro_networkmap.jpg)
 [Source: TransitMaps.net](https://transitmap.net/fantasy-rail-bengaluru-theotherspica/) – Fantasy Map: A speculative rail transit map of Bengaluru, India &copy; theotherspica
 
-## Features
+## Project Report
 
-* **Dynamic Content Handling**: Toggles the Kannada/English button in headless browser mode to retrieve data from the [data source page](https://www.bmrc.co.in/ridership/).
+This is a **Python-based data collection and analysis project** that automatically scrapes daily ridership data from the Bangalore Metro Rail Corporation Limited (BMRCL) website and provides comprehensive analysis through Jupyter notebooks.
 
-* **CSV File Management**: Automatically creates, appends and maintains data in a CSV file. It optimizes the file by removing duplicate data rows if, for example, the script is run multiple times a day.
+This project demonstrates good practices for **automated data collection**, **robust error handling**, and **reproducible analysis** in a real-world civic data context.
 
-* **Error Handling**: Includes checks for connectivity issues, page load time\, and element availability, thus ensuring robust performance when working with an Indian public service website.
+### Tech Stack
+- **Language**: Python 3.8+
+- **Web Scraping**: Selenium WebDriver with Chrome (headless mode)
+- **Data Processing**: Pandas
+- **Analysis & Visualization**: Jupyter Notebooks
+- **Automation**: GitHub Actions (CI/CD)
 
-* **Script Automation**: Included cronjobs.sh with instructions to trigger ridership.py daily at specified times.
+### Architecture - Core Components
 
-* **Advanced Data Analysis & Visualization**: The [included Jupyter notebook](https://bit.ly/nammametro3) provides a step-by-step analysis of the collected data.
+**1. Data Collection**
+- Main entry point for automated data scraping
+- Uses Selenium to navigate BMRCL's ridership page
+- Handles dynamic content (Kannada/English toggle)
+- Implements robust error handling and logging
+- Automatically manages CSV file creation and deduplication
 
-## Dataset
+**2. Data Analysis**
+- `ridership_1data.ipynb` - Interactive version of data collection
+- `ridership_3analysis.ipynb` - Main analysis and visualization notebook
+- `ridership_4analysis.ipynb` - Additional analysis
+- `hypothesis_tester.ipynb` - Statistical hypothesis testing
 
+**3. Data Files**
+- `significant_dates.csv` - Events and holidays affecting ridership
+- `NammaMetro_Ridership_Dataset.csv` - Growing dataset (1 row per day)
+- `metro_stations.py` - Station data for Purple and Green lines
+
+### Data Collection Strategy
+- **Automated Scheduling**: GitHub Actions runs 3x daily (07:33, 12:07, 17:22 UTC)
+- **Headless Browser**: Chrome with optimized options for CI environments
+- **Error Resilience**: Multiple retry mechanisms and comprehensive logging
+- **Data Integrity**: Automatic duplicate detection and removal
+
+### Data Structure
 **NammaMetro_Ridership_Dataset.csv** is updated daily with each row representing the previous day's ridership stats. BMRCL's Ridership page offers the following data points:
 
 * `Record Date`
@@ -34,6 +60,26 @@ The Bangalore Metro Rail Corporation Limited (BMRCL) publishes [daily ridership 
 * `Total QR` (= `QR NammaMetro` + `QR WhatsApp` + `QR Paytm`)
 
 The first entry of this dataset was recorded on 2024-10-26. As the dataset grows, one day and one row at a time, it will become a valuable resource for anyone interested in transportation trends and urban studies.
+
+### Development Patterns
+- **Notebook-First Analysis**: Interactive exploration before production scripts
+- **Modular Design**: Separate concerns (collection, analysis, visualization)
+- **Configuration Management**: Environment-specific settings in workflows
+
+### Automation Architecture
+- **GitHub Actions**: Fully automated data collection with sophisticated ChromeDriver management
+- **Error Handling**: Comprehensive exception handling for Indian government websites
+- **Data Persistence**: Automatic git commits with proper attribution
+
+### Data Quality Measures
+- **Deduplication**: Prevents multiple runs from corrupting dataset
+- **Validation**: Cross-references with significant events
+- **Logging**: Detailed execution logs for debugging
+
+### Scalability Considerations
+- **Future Work**: Designed to extend to other Indian metro systems
+- **Modular Station Data**: Easy to add new lines and stations
+- **Event Correlation**: Framework for analyzing ridership against external events
 
 ## Installation
 
@@ -76,28 +122,6 @@ The `cronjobs.sh` script automates the execution of `ridership.py` to collect da
 The jobs run at 17:37 UTC, 20:52 UTC, and 01:23 UTC. Feel free to customise as needed. Scheduling multiple cron jobs in a 24-hour period increases the likelihood that data is captured every day. The program eliminates duplication of data in the dataset.
 
 **Doable Danny** is a good place to [learn more about cron jobs](https://www.doabledanny.com/cron-jobs-on-mac).
-
-## Project Structure
-
-**namma-metro-ridership-tracker** (repo)
-
-1. `README.md`
-
-2. `LICENSE`
-
-3. `requirements.txt` —— Required Python packages
-
-4. `ridership.py` and `ridership_1data.ipynb` —— Program for downloading, storing and maintaining data in the dataset
-
-5. `ridership_3analysis.ipynb` —— Jupyter Notebook for Data Analysis & Visualisation
-
-6. `Namma Metro_Ridership_Dataset.csv` —— Collected ridership dataset (grows @ 1 row/day)
-
-7. `cronjobs.sh` —— shell script to automatically run the program at a specific time
-
-8. `/images` —— Folder containing images and photographs used in `ridership_3analysis.ipynb`
-
-9. `significant_dates.csv` —— CSV file containing significant dates and events specific to Bangalore
 
 ## Future Work
 
