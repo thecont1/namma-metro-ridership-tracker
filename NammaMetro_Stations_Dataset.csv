@@ -1,0 +1,173 @@
+code,name_eng,name_kan,lines,is_terminus,is_interchange
+[TBC],Agara,ಅಗರ,🔵🔴,False,True
+[TBC],Airport City,ವಿಮಾನ ನಿಲ್ದಾಣ ನಗರ,🔵,False,False
+[TBC],Ambedkar Nagar,ಅಂಬೇಡ್ಕರ್ ನಗರ,🔴,False,False
+AGPP,Attiguppe,ಅತ್ತಿಗುಪ್ಪೆ,🟣,False,False
+[TBC],BEL Circle,ಬಿ ಇ ಎಲ್ ವೃತ್ತ,🟠,False,False
+BTML,BTM Layout,ಬಿ ಟಿ ಎಂ ಬಡಾವಣೆ,🟡,False,False
+[TBC],Bagalur Cross,ಬಾಗಲೂರು ಕ್ರಾಸ್,🔵,False,False
+[TBC],Bagmane Developers - DRDO Sports Complex,ರ.ಸಂ.ಅ.ಸಂ. ಕ್ರೀಡಾ ಸಂಕೀರ್ಣ,🔵,False,False
+[TBC],Bahubhali Nagara,ಬಾಹುಬಲಿ ನಗರ,🟠,False,False
+BYPL,Baiyappanahalli,ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ,🟣,False,False
+BSNK,Banashankari,ಬನಶಂಕರಿ,🟢,False,False
+[TBC],Basaveshwara Circle,ಬಸವೇಶ್ವರ ವೃತ್ತ,🔴,False,False
+[TBC],Bellandur,ಬೆಳ್ಳಂದೂರು,🔵,False,False
+[TBC],Bellandur Gate,ಬೆಳ್ಳಂದೂರು ಗೇಟ್,🔴,False,False
+[TBC],Bengaluru Golf Course,ಬೆಂಗಳೂರು ಗಾಲ್ಫ್ ಕೋರ್ಸ್,🔴,False,False
+JTPM,Benniganahalli,ಬೆನ್ನಿಗಾನಹಳ್ಳಿ,🟣,False,False
+HOSR,Beratena Agrahara,ಬೆರಟೇನ ಅಗ್ರಹಾರ,🟡,False,False
+HBGI,Biocon Hebbagodi,ಬಯೋಕಾನ್ ಹೆಬ್ಬಗೋಡಿ,🟡,False,False
+HSRL,Bommanahalli,ಬೊಮ್ಮನಹಳ್ಳಿ,🟡,False,False
+[TBC],Byadarahalli,ಬ್ಯಾಡರಹಳ್ಳಿ,⚪,False,False
+[TBC],Cantonment Railway Station,ದಂಡು ರೈಲ್ವೇ ನಿಲ್ದಾಣ,🌸,False,False
+[TBC],Carmelaram,ಕಾರ್ಮೆಲರಾಮ್,🔴,False,False
+SBJT,Central Silk Board,ಕೇಂದ್ರ ರೇಷ್ಮೆ ಮಂಡಳಿ,🟡🔵,False,True
+CLGA,Challaghatta,ಚಲ್ಲಘಟ್ಟ,🟣,True,False
+CKPE,Chickpete,ಚಿಕ್ಕಪೇಟೆ,🟢,False,False
+CKBD,Chikkabidarakallu,ಚಿಕ್ಕಬಿದರಕಲ್ಲು,🟢,False,False
+[TBC],Chowdeshwari Nagara,ಚೌಡೇಶ್ವರಿ ನಗರ,🟠,False,False
+CBPK,Cubbon Park,ಕಬ್ಬನ್ ಪಾರ್ಕ್,🟣,False,False
+[TBC],Dairy Circle,ಡೈರಿ ವೃತ್ತ,🌸🔴,False,True
+DSH,Dasarahalli,ದಾಸರಹಳ್ಳಿ,🟢,False,False
+DJNR,Deepanjali Nagar,ದೀಪಾಂಜಲಿ ನಗರ,🟣,False,False
+BMSD,Delta Electronics Bommasandra,ಡೆಲ್ಟಾ ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಬೊಮ್ಮಸಂದ್ರ,🟡,True,False
+[TBC],Doddajala,ದೊಡ್ಡಜಾಲ,🔵,False,False
+KLPK,Doddakallasandra,ದೊಡ್ಡಕಲ್ಲಸಂದ್ರ,🟢,False,False
+[TBC],Doddakannelli,ದೊಡ್ಡಕನ್ನೆಲ್ಲಿ,🔴,False,False
+[TBC],Doddanekundi,ದೊಡ್ಡನೆಕ್ಕುಂದಿ,🔵,False,False
+[TBC],Dommasandra,ದೊಮ್ಮಸಂದ್ರ,🔴,False,False
+[TBC],Dr. Ambedkar Institute of Technology,ಡಾ||ಅಂಬೇಡ್ಕರ್‌ ತಾಂತ್ರಿಕ ಮಹಾವಿದ್ಯಾಲಯ,🟠,False,False
+VDSA,"Dr. B. R. Ambedkar Station, Vidhana Soudha","ಡಾ. ಬಿ. ಆರ್. ಅಂಬೇಡ್ಕರ್ ನಿಲ್ದಾಣ, ವಿಧಾನ ಸೌಧ",🟣,False,False
+ETCT,Electronic City,ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ,🟡,False,False
+[TBC],Embassy TechVillage Kadubeesanahalli,ಕಾಡುಬೀಸನಹಳ್ಳಿ,🔵,False,False
+[TBC],Forest Gate,ಅರಣ್ಯ ದ್ವಾರ,⚪,False,False
+[TBC],Freedom Fighters Cross,ಫ್ರೀಡಂ ಫೈಟರ್ಸ್ ಕ್ರಾಸ್,🟠,False,False
+[TBC],Ganganagar,ಗಂಗಾನಗರ,🔴,False,False
+GDCP,Garudacharpalya,ಗರುಡಾಚಾರ್‍‍ಪಾಳ್ಯ,🟣,False,False
+YPI,Goraguntepalya,ಗೊರಗುಂಟೆಪಾಳ್ಯ,🟢,False,False
+[TBC],HBR Layout,ಎಚ್‌ ಬಿ ಆರ್ ಬಡಾವಣೆ,🔵,False,False
+[TBC],HRBR Layout,ಎಚ್‌ ಆರ್‌ ಬಿ ಆರ್ ಬಡಾವಣೆ,🔵,False,False
+[TBC],HSR Layout,ಎಚ್‌ ಎಸ್‌ ಆರ್ ಬಡಾವಣೆ,🔵,False,False
+HLRU,Halasuru,ಹಲಸೂರು,🟣,False,False
+[TBC],Hebbala,ಹೆಬ್ಬಾಳ,🔵🟠🔴,True,True
+[TBC],Herohalli,ಹೇರೋಹಳ್ಳಿ,⚪,False,False
+OFDC,Hongasandra,ಹೊಂಗಸಂದ್ರ,🟡,False,False
+DKIA,Hoodi,ಹೂಡಿ,🟣,False,False
+UWVL,Hopefarm Channasandra,ಹೋಪ್ ಫಾರ್ಮ್ ಚನ್ನಸಂದ್ರ,🟣,False,False
+[TBC],Horamavu,ಹೊರಮಾವು,🔵,False,False
+BSRD,Hosa Road,ಹೊಸ ರಸ್ತೆ,🟡,False,False
+[TBC],Hosakerahalli Cross,ಹೊಸಕೆರೆಹಳ್ಳಿ ಕ್ರಾಸ್,🟠,False,False
+[TBC],Hulimavu,ಹುಳಿಮಾವು,🌸,False,False
+HSKR,Huskur Road,ಹುಸ್ಕೂರು ರಸ್ತೆ,🟡,False,False
+[TBC],IIMB,ಐ ಐ ಎಂ ಬಿ,🌸,False,False
+[TBC],ISRO,ಇಸ್ರೋ,🔵,False,False
+[TBC],Ibbaluru,ಇಬ್ಬಲೂರು,🔵🔴,False,True
+IDN,Indiranagar,ಇಂದಿರಾ ನಗರ,🟣,False,False
+ECTN,Infosys Foundation Konappana Agrahara,ಇನ್ಫೋಸಿಸ್ ಫೌಂಡೇಷನ್ ಕೋನಪ್ಪನ ಅಗ್ರಹಾರ,🟡,False,False
+[TBC],JP Nagar 4th Phase,ಜಯಪ್ರಕಾಶ ನಗರ 4ನೇ ಹಂತ,🌸🟠,True,True
+[TBC],JP Nagar 5th Phase,ಜೆಪಿ ನಗರ ೫ನೇ ಹಂತ,🟠,False,False
+[TBC],Jakkasandra,ಜಕ್ಕಸಂದ್ರ,🔴,False,False
+[TBC],Jakkur Cross,ಜಕ್ಕೂರು ಕ್ರಾಸ್,🔵,False,False
+JLHL,Jalahalli,ಜಾಲಹಳ್ಳಿ,🟢,False,False
+JPN,Jaya Prakash Nagar,ಜಯಪ್ರಕಾಶ ನಗರ,🟢,False,False
+JDHP,Jayadeva Hospital,ಜಯದೇವ ಆಸ್ಪತ್ರೆ,🟡🌸,False,True
+JYN,Jayanagar,ಜಯನಗರ,🟢,False,False
+BGUC,Jnanabharathi,ಜ್ಞಾನಭಾರತಿ,🟣,False,False
+[TBC],KHB Colony,ಕೆ ಎಚ್ ಬಿ ಕಾಲೋನಿ,⚪,False,False
+[TBC],KIAL Terminals,ಕೆಂಪೇಗೌಡ ಅಂತಾರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ,🔵,True,False
+[TBC],Kada Agrahara Road,ಕಡ ಅಗ್ರಹಾರ ರಸ್ತೆ,🔴,False,False
+[TBC],Kadabagere,ಕಡಬಗೆರೆ,⚪,False,False
+[TBC],Kadirenahalli Cross,ಕದಿರೇನಹಳ್ಳಿ ಕ್ರಾಸ್,🟠,False,False
+KDGD,Kadugodi Tree Park,ಕಾಡುಗೋಡಿ ಟ್ರೀ ಪಾರ್ಕ್,🟣,False,False
+[TBC],Kadugundanahalli,ಕಾಡುಗುಂಡನಹಳ್ಳಿ,🌸,False,False
+[TBC],Kaikondrahalli,ಕೈಕೊಂಡ್ರಹಳ್ಳಿ,🔴,False,False
+[TBC],Kalena Agrahara,ಕಾಳೇನ ಅಗ್ರಹಾರ,🌸,True,False
+[TBC],Kalyan Nagar,ಕಲ್ಯಾಣ ನಗರ,🔵,False,False
+[TBC],Kamakya Bus Depot,ಕಾಮಾಕ್ಯ ಬಸ್‌ ಘಟಕ,🟠,False,False
+[TBC],Kanteerava Studio,ಕಂಠೀರವ ಸ್ಟುಡಿಯೋ,🟠,False,False
+[TBC],Kasturi Nagar,ಕಸ್ತೂರಿ ನಗರ,🔵,False,False
+[TBC],Kempapura,ಕೆಂಪಾಪುರ,🔵🟠,True,True
+KGIT,Kengeri,ಕೆಂಗೇರಿ,🟣,False,False
+MLSD,Kengeri Bus Terminal,ಕೆಂಗೇರಿ ಬಸ್ ಟರ್ಮಿನಲ್,🟣,False,False
+[TBC],Kodathi Circle,ಕೋಡತಿ ವೃತ್ತ,🔴,False,False
+[TBC],Kodibeesanahalli,ಕೋಡಿಬೀಸನಹಳ್ಳಿ,🔵,False,False
+[TBC],Kodigehalli,ಕೊಡಿಗೇಹಳ್ಳಿ,🔵,False,False
+APRC,Konanakunte Cross,ಕೋಣನಕುಂಟೆ ಕ್ರಾಸ್,🟢,False,False
+[TBC],Koramangala II Block,ಕೋರಮಂಗಲ II ಬ್ಲಾಕ್,🔴,False,False
+[TBC],Koramangala III Block,ಕೋರಮಂಗಲ III ಬ್ಲಾಕ್,🔴,False,False
+SRCS,Krantivira Sangolli Rayanna Railway Station,ಕ್ರಾಂತಿವೀರ ಸಂಗೊಳ್ಳಿ ರಾಯಣ್ಣ ರೈಲು ನಿಲ್ದಾಣ,🟣,False,False
+[TBC],Krishna Rajendra Circle,ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ವೃತ್ತ,🔴,False,False
+KRMT,Krishna Rajendra Market,ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ಮಾರುಕಟ್ಟೆ,🟢,False,False
+KRAM,Krishnarajapura (K.R.Pura),ಕೃಷ್ಣರಾಜಪುರ (ಕೆ. ಆರ್. ಪುರ),🟣🔵,False,False
+MSRN,Kudlu Gate,ಕೂಡ್ಲು ಗೇಟ್,🟡,False,False
+KDNH,Kundalahalli,ಕುಂದಲಹಳ್ಳಿ,🟣,False,False
+[TBC],Lakkasandra,ಲಕ್ಕಸಂದ್ರ,🌸,False,False
+LBGH,Lalbagh,ಲಾಲ್ ಬಾಗ್,🟢,False,False
+[TBC],Langford Town,ಲ್ಯಾಂಗ್ಫೋರ್ಡ್ ಟೌನ್,🌸,False,False
+BIET,Madavara,ಮಾದಾವರ,🟢,True,False
+MIRD,Magadi Road,ಮಾಗಡಿ ರಸ್ತೆ,🟣,False,False
+KVPR,Mahakavi Kuvempu Road,ಮಹಾಕವಿ ಕುವೆಂಪು ರಸ್ತೆ,🟢,False,False
+MHLI,Mahalakshmi,ಮಹಾಲಕ್ಷ್ಮೀ,🟢,False,False
+MAGR,Mahatma Gandhi Road,ಮಹಾತ್ಮಾ ಗಾಂಧಿ ರಸ್ತೆ,🟣🌸,False,False
+MNJN,Manjunathanagara,ಮಂಜುನಾಥನಗರ,🟢,False,False
+SPGD,Mantri Square Sampige Road,"ಮಂತ್ರಿ ಸ್ಕ್ವೇರ್, ಸಂಪಿಗೆ ರಸ್ತೆ",🟢,False,False
+[TBC],Marathahalli,ಮಾರತಹಳ್ಳಿ,🔵,False,False
+[TBC],Mekhri Circle,ಮೇಖ್ರಿ ಸರ್ಕಲ್,🔴,False,False
+[TBC],Muthanalluru Cross,ಮುತ್ತನಲ್ಲೂರು ಕ್ರಾಸ್,🔴,False,False
+MYRD,Mysuru Road,ಮೈಸೂರು ರಸ್ತೆ,🟣,False,False
+[TBC],NIMHANS,ನಿಮ್ಹಾನ್ಸ್,🔴,False,False
+KGWA,"Nadaprabhu Kempegowda Station, Majestic","ನಾಡಪ್ರಭು ಕೆಂಪೇಗೌಡ ನಿಲ್ದಾಣ, ಮೆಜೆಸ್ಟಿಕ್",🟣🟢,False,True
+[TBC],Nagarabhavi Circle,ನಾಗರಬಾವಿ ವೃತ್ತ,🟠,False,False
+[TBC],Nagarbhavi BDA Complex,ನಾಗರಬಾವಿ ಬಿ ಡಿ ಎ ಸಂಕೀರ್ಣ,🟠,False,False
+NGSA,Nagasandra,ನಾಗಸಂದ್ರ,🟢,False,False
+[TBC],Nagashetty Halli,ನಾಗಶೆಟ್ಟಿಹಲ್ಲಿ,🟠,False,False
+[TBC],Nagawara,ನಾಗವಾರ,🌸🔵,True,True
+VDHP,Nallurhalli,ನಲ್ಲೂರುಹಳ್ಳಿ,🟣,False,False
+NLC,National College,ನ್ಯಾಷನಲ್ ಕಾಲೇಜ್,🟢,False,False
+[TBC],National Military School,ರಾಷ್ಟ್ರೀಯ ಸ್ಯೆನಿಕ ಶಾಲೆ,🌸,False,False
+[TBC],PES University,ಪಿಇಎಸ್ ವಿಶ್ವವಿದ್ಯಾಲಯ,🟠,False,False
+[TBC],Palace Guttahalli,ಗುಟ್ಟಹಳ್ಳಿ ಅರಮನೆ,🔴,False,False
+NYHM,Pantharapalya–Nayandahalli,ಪಂತರಪಾಳ್ಯ - ನಾಯಂಡಹಳ್ಳಿ,🟣,False,False
+PATG,Pattanagere,ಪಟ್ಟಣಗೆರೆ,🟣,False,False
+ITPL,Pattandur Agrahara,ಪಟ್ಟಂದೂರು ಅಗ್ರಹಾರ,🟣,False,False
+PEYA,Peenya,ಪೀಣ್ಯ,🟢,False,False
+PYID,Peenya Industry,ಪೀಣ್ಯ ಇಂಡಸ್ಟ್ರಿ,🟢,False,False
+[TBC],Pottery Town,ಪಾಟರಿ ಟೌನ್,🌸,False,False
+RGDT,Ragigudda,ರಾಗಿಗುಡ್ಡ,🟡,False,False
+RJNR,Rajajinagar,ರಾಜಾಜಿನಗರ,🟢,False,False
+RRRN,Rajarajeshwari Nagar,ರಾಜರಾಜೇಶ್ವರಿ ನಗರ,🟣,False,False
+RVR,Rashtreeya Vidyalaya Road,ರಾಷ್ಟ್ರೀಯ ವಿದ್ಯಾಲಯ ರಸ್ತೆ,🟢🟡,True,True
+SSFY,Sandal Soap Factory,ಸ್ಯಾಂಡಲ್ ಸೋಪ್ ಫ್ಯಾಕ್ಟರಿ,🟢,False,False
+[TBC],Saraswathi Nagar,ಸರಸ್ವತಿ ನಗರ,🔵,False,False
+[TBC],Sarjapura,ಸರ್ಜಾಪುರ,🔴,False,False
+VWIA,Seetharamapalya,ಸೀತಾರಾಮಪಾಳ್ಯ,🟣,False,False
+[TBC],Shanthinagara,ಶಾಂತಿನಗರ,🔴,False,False
+[TBC],Shivajinagar,ಶಿವಾಜಿನಗರ,🌸,False,False
+APTS,Silk Institute,ರೇಷ್ಮೆ ಸಂಸ್ಥೆ,🟢,True,False
+CKBR,Singasandra,ಸಿಂಗಸಂದ್ರ,🟡,False,False
+MDVP,Singayyanapalya,ಸಿಂಗಯ್ಯನಪಾಳ್ಯ,🟣,False,False
+VSWA,"Sir.M.Visvesvaraya Stn., Central College","ಸರ್ ಎಂ.ವಿಶ್ವೇಶ್ವರಯ್ಯ ನಿಲ್ದಾಣ , ಸೆಂಟ್ರಲ್ ಕಾಲೇಜು",🟣,False,False
+[TBC],Sompura,ಸೋಂಪುರ,🔴,False,False
+SECE,South End Circle,ಸೌತ್ ಎಂಡ್ ಸರ್ಕಲ್,🟢,False,False
+HSLI,"Sri Balagangadharanatha Swamiji Station, Hosahalli","ಶ್ರೀ ಬಾಲಗಂಗಾಧರನಾಥ ಸ್ವಾಮೀಜಿ ನಿಲ್ದಾಣ,ಹೊಸಹಳ್ಳಿ",🟣,False,False
+SSHP,Sri Sathya Sai Hospital,ಶ್ರೀ ಸತ್ಯ ಸಾಯಿ ಆಸ್ಪತ್ರೆ,🟣,False,False
+SPRU,Srirampura,ಶ್ರೀರಾಮ್‍ಪುರ,🟢,False,False
+[TBC],Sumanahalli Cross,ಸುಮನಹಳ್ಳಿ ಕ್ರಾಸ್,🟠⚪,False,False
+[TBC],Sunkadakatte,ಸುಂಕದಕಟ್ಟೆ,⚪,False,False
+SVRD,Swami Vivekananda Road,ಸ್ವಾಮಿ ವಿವೇಕಾನಂದ ರಸ್ತೆ,🟣,False,False
+[TBC],Tannery Road,ಟ್ಯಾನರಿ ರಸ್ತೆ,🌸,False,False
+[TBC],Tavarakere,ತಾವರೆಕೆರೆ,🌸,False,False
+TGTP,Thalaghattapura,ತಲಘಟ್ಟಪುರ,🟢,False,False
+[TBC],Town Hall,ಟೌನ್ ಹಾಲ್,🔴,False,False
+TTY,Trinity,ಟ್ರಿನಿಟಿ,🟣,False,False
+VJRH,Vajarahalli,ವಾಜರಹಳ್ಳಿ,🟢,False,False
+[TBC],Veerannapalya,ವೀರಣ್ಣಪಾಳ್ಯ,🔵,False,False
+[TBC],Venkateshpura,ವೆಂಕಟೇಶಪುರ,🌸,False,False
+[TBC],Veterinary College,ವೆಟರ್ನರಿ ಕಾಲೇಜು,🔴,False,False
+VJN,Vijayanagar,ವಿಜಯನಗರ,🟣,False,False
+[TBC],Vinayaka Layout,ವಿನಾಯಕ ಬಡಾವಣೆ,🟠,False,False
+[TBC],Vinayaka Nagar,ವಿನಾಯಕ ನಗರ,⚪,False,False
+WHTM,Whitefield (Kadugodi),ವೈಟ್ ಫೀಲ್ಡ್ (ಕಾಡುಗೋಡಿ),🟣,True,False
+PUTH,Yelachenahalli,ಯಲಚೇನಹಳ್ಳಿ,🟢,False,False
+[TBC],Yelahanka,ಯಲಹಂಕ,🔵,False,False
+YPM,Yeshwanthpur,ಯಶವಂತಪುರ,🟢,False,False
