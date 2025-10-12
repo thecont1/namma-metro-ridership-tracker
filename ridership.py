@@ -52,7 +52,7 @@ try:
     # Attempt to click on Kannada toggle button
     try:
         logger.info("Waiting for language toggle button")
-        toggle_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "link.top-navcustom-text")))
+        toggle_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".link.top-navcustom-text")))
         time.sleep(10)  # Allow extra time for JavaScript to load translated data
         toggle_button.click()
         logger.info("Language toggle button clicked")
@@ -83,7 +83,7 @@ try:
     # Parse html for remaining data points and store in pandas dataframe
     try:
         logger.info("Extracting ridership data")
-        data_points = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, "features-card.achivement-area.bg-color")))
+        data_points = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".features-card.achivement-area.bg-color")))
         if not data_points:
             logger.warning("No ridership data elements found")
         
