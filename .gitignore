@@ -4,3 +4,7 @@ ridership_2analysis.ipynb
 cronjobs.sh
 dataviz-app
 WARP.md
+
+# Editor/agent configs
+.hermes/
+.vscode/
