@@ -1,45 +1,38 @@
 [
   {
-    "date":"2024-11-18",
+    "date":"2024-11-16",
     "channel":"groupTicket",
-    "value":833,
-    "baseline":1311.0,
-    "changePct":-36.46
+    "value":1311,
+    "baseline":380.5,
+    "changePct":244.55
   },
   {
-    "date":"2024-11-19",
-    "channel":"ncmc",
-    "value":12331,
-    "baseline":8463.5,
-    "changePct":45.7
-  },
-  {
-    "date":"2024-11-19",
-    "channel":"smartcard",
-    "value":483984,
-    "baseline":347531.0,
-    "changePct":39.26
+    "date":"2024-11-16",
+    "channel":"qrWhatsApp",
+    "value":126066,
+    "baseline":94049.0,
+    "changePct":34.04
   },
   {
     "date":"2024-11-22",
     "channel":"groupTicket",
     "value":1578,
-    "baseline":933.8,
-    "changePct":69.0
+    "baseline":749.3,
+    "changePct":110.59
   },
   {
     "date":"2024-11-24",
     "channel":"ncmc",
     "value":4558,
-    "baseline":9998.0,
-    "changePct":-54.41
+    "baseline":10090.3,
+    "changePct":-54.83
   },
   {
     "date":"2024-11-24",
     "channel":"smartcard",
     "value":232570,
-    "baseline":413861.2,
-    "changePct":-43.8
+    "baseline":418182.6,
+    "changePct":-44.39
   },
   {
     "date":"2024-11-25",
@@ -1195,5 +1188,12 @@
     "value":237,
     "baseline":142.0,
     "changePct":66.9
+  },
+  {
+    "date":"2025-04-16",
+    "channel":"groupTicket",
+    "value":299,
+    "baseline":144.4,
+    "changePct":107.02
   }
 ]

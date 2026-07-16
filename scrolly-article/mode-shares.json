@@ -1,5 +1,25 @@
 [
   {
+    "date":"2024-11-14",
+    "smartcard":0.5404,
+    "token":0.2382,
+    "ncmc":0.0136,
+    "groupTicket":0.0004,
+    "qrNammaMetro":0.0582,
+    "qrWhatsApp":0.1069,
+    "qrPaytm":0.0423
+  },
+  {
+    "date":"2024-11-15",
+    "smartcard":0.5245,
+    "token":0.2498,
+    "ncmc":0.0126,
+    "groupTicket":0.0005,
+    "qrNammaMetro":0.0603,
+    "qrWhatsApp":0.1121,
+    "qrPaytm":0.0402
+  },
+  {
     "date":"2024-11-16",
     "smartcard":0.3964,
     "token":0.315,
@@ -1198,5 +1218,15 @@
     "qrNammaMetro":0.0667,
     "qrWhatsApp":0.1247,
     "qrPaytm":0.0414
+  },
+  {
+    "date":"2025-04-16",
+    "smartcard":0.5151,
+    "token":0.2696,
+    "ncmc":0.013,
+    "groupTicket":0.0003,
+    "qrNammaMetro":0.0577,
+    "qrWhatsApp":0.1081,
+    "qrPaytm":0.0361
   }
 ]

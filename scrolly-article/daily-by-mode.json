@@ -1,5 +1,27 @@
 [
   {
+    "date":"2024-11-14",
+    "smartcard":471099,
+    "token":207693,
+    "ncmc":11858,
+    "groupTicket":348,
+    "qrNammaMetro":50740,
+    "qrWhatsApp":93169,
+    "qrPaytm":36851,
+    "total":871758
+  },
+  {
+    "date":"2024-11-15",
+    "smartcard":444111,
+    "token":211495,
+    "ncmc":10644,
+    "groupTicket":413,
+    "qrNammaMetro":51089,
+    "qrWhatsApp":94929,
+    "qrPaytm":34075,
+    "total":846756
+  },
+  {
     "date":"2024-11-16",
     "smartcard":331695,
     "token":263563,
@@ -1318,5 +1340,16 @@
     "qrWhatsApp":84737,
     "qrPaytm":28108,
     "total":679560
+  },
+  {
+    "date":"2025-04-16",
+    "smartcard":449829,
+    "token":235448,
+    "ncmc":11369,
+    "groupTicket":299,
+    "qrNammaMetro":50383,
+    "qrWhatsApp":94435,
+    "qrPaytm":31516,
+    "total":873279
   }
 ]
