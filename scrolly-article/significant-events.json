@@ -1,17 +1,5 @@
 [
   {
-    "date":"2024-10-31",
-    "label":"Diwali",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
-    "date":"2024-11-01",
-    "label":"Rajayotsava Day",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
     "date":"2024-12-24",
     "label":"Christmas Eve",
     "type":"festival",
@@ -146,36 +134,6 @@
   {
     "date":"2025-04-14",
     "label":"Ambedkar Jayanti",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
-    "date":"2025-04-18",
-    "label":"Good Friday",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
-    "date":"2025-04-20",
-    "label":"Easter Sunday",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
-    "date":"2025-04-27",
-    "label":"TCS World 10K Marathon",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
-    "date":"2025-04-30",
-    "label":"Basava Jayanti",
-    "type":"festival",
-    "weight":"secondary"
-  },
-  {
-    "date":"2025-05-01",
-    "label":"May Day",
     "type":"festival",
     "weight":"secondary"
   }
