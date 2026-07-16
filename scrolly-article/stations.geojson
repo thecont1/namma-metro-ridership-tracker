@@ -1,0 +1,2970 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Agara",
+        "name_kan": "ಅಗರ",
+        "lines": [
+          "🔵",
+          "🔴"
+        ],
+        "lineColors": [
+          "#2196f3",
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Airport City",
+        "name_kan": "ವಿಮಾನ ನಿಲ್ದಾಣ ನಗರ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Ambedkar Nagar",
+        "name_kan": "ಅಂಬೇಡ್ಕರ್ ನಗರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "AGPP",
+        "name": "Attiguppe",
+        "name_kan": "ಅತ್ತಿಗುಪ್ಪೆ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "BEL Circle",
+        "name_kan": "ಬಿ ಇ ಎಲ್ ವೃತ್ತ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BTML",
+        "name": "BTM Layout",
+        "name_kan": "ಬಿ ಟಿ ಎಂ ಬಡಾವಣೆ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Bagalur Cross",
+        "name_kan": "ಬಾಗಲೂರು ಕ್ರಾಸ್",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Bagmane Developers - DRDO Sports Complex",
+        "name_kan": "ರ.ಸಂ.ಅ.ಸಂ. ಕ್ರೀಡಾ ಸಂಕೀರ್ಣ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Bahubhali Nagara",
+        "name_kan": "ಬಾಹುಬಲಿ ನಗರ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BYPL",
+        "name": "Baiyappanahalli",
+        "name_kan": "ಬೈಯ್ಯಪ್ಪನಹಳ್ಳಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BSNK",
+        "name": "Banashankari",
+        "name_kan": "ಬನಶಂಕರಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Basaveshwara Circle",
+        "name_kan": "ಬಸವೇಶ್ವರ ವೃತ್ತ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Bellandur",
+        "name_kan": "ಬೆಳ್ಳಂದೂರು",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Bellandur Gate",
+        "name_kan": "ಬೆಳ್ಳಂದೂರು ಗೇಟ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Bengaluru Golf Course",
+        "name_kan": "ಬೆಂಗಳೂರು ಗಾಲ್ಫ್ ಕೋರ್ಸ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "JTPM",
+        "name": "Benniganahalli",
+        "name_kan": "ಬೆನ್ನಿಗಾನಹಳ್ಳಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "HOSR",
+        "name": "Beratena Agrahara",
+        "name_kan": "ಬೆರಟೇನ ಅಗ್ರಹಾರ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "HBGI",
+        "name": "Biocon Hebbagodi",
+        "name_kan": "ಬಯೋಕಾನ್ ಹೆಬ್ಬಗೋಡಿ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "HSRL",
+        "name": "Bommanahalli",
+        "name_kan": "ಬೊಮ್ಮನಹಳ್ಳಿ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Byadarahalli",
+        "name_kan": "ಬ್ಯಾಡರಹಳ್ಳಿ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Cantonment Railway Station",
+        "name_kan": "ದಂಡು ರೈಲ್ವೇ ನಿಲ್ದಾಣ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Carmelaram",
+        "name_kan": "ಕಾರ್ಮೆಲರಾಮ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SBJT",
+        "name": "Central Silk Board",
+        "name_kan": "ಕೇಂದ್ರ ರೇಷ್ಮೆ ಮಂಡಳಿ",
+        "lines": [
+          "🟡",
+          "🔵"
+        ],
+        "lineColors": [
+          "#fbc02d",
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "CLGA",
+        "name": "Challaghatta",
+        "name_kan": "ಚಲ್ಲಘಟ್ಟ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "CKPE",
+        "name": "Chickpete",
+        "name_kan": "ಚಿಕ್ಕಪೇಟೆ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "CKBD",
+        "name": "Chikkabidarakallu",
+        "name_kan": "ಚಿಕ್ಕಬಿದರಕಲ್ಲು",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Chowdeshwari Nagara",
+        "name_kan": "ಚೌಡೇಶ್ವರಿ ನಗರ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "CBPK",
+        "name": "Cubbon Park",
+        "name_kan": "ಕಬ್ಬನ್ ಪಾರ್ಕ್",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Dairy Circle",
+        "name_kan": "ಡೈರಿ ವೃತ್ತ",
+        "lines": [
+          "🌸",
+          "🔴"
+        ],
+        "lineColors": [
+          "#999",
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "DSH",
+        "name": "Dasarahalli",
+        "name_kan": "ದಾಸರಹಳ್ಳಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "DJNR",
+        "name": "Deepanjali Nagar",
+        "name_kan": "ದೀಪಾಂಜಲಿ ನಗರ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BMSD",
+        "name": "Delta Electronics Bommasandra",
+        "name_kan": "ಡೆಲ್ಟಾ ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಬೊಮ್ಮಸಂದ್ರ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Doddajala",
+        "name_kan": "ದೊಡ್ಡಜಾಲ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KLPK",
+        "name": "Doddakallasandra",
+        "name_kan": "ದೊಡ್ಡಕಲ್ಲಸಂದ್ರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Doddakannelli",
+        "name_kan": "ದೊಡ್ಡಕನ್ನೆಲ್ಲಿ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Doddanekundi",
+        "name_kan": "ದೊಡ್ಡನೆಕ್ಕುಂದಿ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Dommasandra",
+        "name_kan": "ದೊಮ್ಮಸಂದ್ರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Dr. Ambedkar Institute of Technology",
+        "name_kan": "ಡಾ||ಅಂಬೇಡ್ಕರ್‌ ತಾಂತ್ರಿಕ ಮಹಾವಿದ್ಯಾಲಯ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "VDSA",
+        "name": "Dr. B. R. Ambedkar Station, Vidhana Soudha",
+        "name_kan": "ಡಾ. ಬಿ. ಆರ್. ಅಂಬೇಡ್ಕರ್ ನಿಲ್ದಾಣ, ವಿಧಾನ ಸೌಧ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "ETCT",
+        "name": "Electronic City",
+        "name_kan": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ ಸಿಟಿ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Embassy TechVillage Kadubeesanahalli",
+        "name_kan": "ಕಾಡುಬೀಸನಹಳ್ಳಿ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Forest Gate",
+        "name_kan": "ಅರಣ್ಯ ದ್ವಾರ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Freedom Fighters Cross",
+        "name_kan": "ಫ್ರೀಡಂ ಫೈಟರ್ಸ್ ಕ್ರಾಸ್",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Ganganagar",
+        "name_kan": "ಗಂಗಾನಗರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "GDCP",
+        "name": "Garudacharpalya",
+        "name_kan": "ಗರುಡಾಚಾರ್‍‍ಪಾಳ್ಯ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "YPI",
+        "name": "Goraguntepalya",
+        "name_kan": "ಗೊರಗುಂಟೆಪಾಳ್ಯ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "HBR Layout",
+        "name_kan": "ಎಚ್‌ ಬಿ ಆರ್ ಬಡಾವಣೆ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "HRBR Layout",
+        "name_kan": "ಎಚ್‌ ಆರ್‌ ಬಿ ಆರ್ ಬಡಾವಣೆ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "HSR Layout",
+        "name_kan": "ಎಚ್‌ ಎಸ್‌ ಆರ್ ಬಡಾವಣೆ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "HLRU",
+        "name": "Halasuru",
+        "name_kan": "ಹಲಸೂರು",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Hebbala",
+        "name_kan": "ಹೆಬ್ಬಾಳ",
+        "lines": [
+          "🔵",
+          "🟠",
+          "🔴"
+        ],
+        "lineColors": [
+          "#2196f3",
+          "#ff9800",
+          "#e53935"
+        ],
+        "isTerminus": true,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Herohalli",
+        "name_kan": "ಹೇರೋಹಳ್ಳಿ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "OFDC",
+        "name": "Hongasandra",
+        "name_kan": "ಹೊಂಗಸಂದ್ರ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "DKIA",
+        "name": "Hoodi",
+        "name_kan": "ಹೂಡಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "UWVL",
+        "name": "Hopefarm Channasandra",
+        "name_kan": "ಹೋಪ್ ಫಾರ್ಮ್ ಚನ್ನಸಂದ್ರ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Horamavu",
+        "name_kan": "ಹೊರಮಾವು",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BSRD",
+        "name": "Hosa Road",
+        "name_kan": "ಹೊಸ ರಸ್ತೆ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Hosakerahalli Cross",
+        "name_kan": "ಹೊಸಕೆರೆಹಳ್ಳಿ ಕ್ರಾಸ್",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Hulimavu",
+        "name_kan": "ಹುಳಿಮಾವು",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "HSKR",
+        "name": "Huskur Road",
+        "name_kan": "ಹುಸ್ಕೂರು ರಸ್ತೆ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "IIMB",
+        "name_kan": "ಐ ಐ ಎಂ ಬಿ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "ISRO",
+        "name_kan": "ಇಸ್ರೋ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Ibbaluru",
+        "name_kan": "ಇಬ್ಬಲೂರು",
+        "lines": [
+          "🔵",
+          "🔴"
+        ],
+        "lineColors": [
+          "#2196f3",
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "IDN",
+        "name": "Indiranagar",
+        "name_kan": "ಇಂದಿರಾ ನಗರ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "ECTN",
+        "name": "Infosys Foundation Konappana Agrahara",
+        "name_kan": "ಇನ್ಫೋಸಿಸ್ ಫೌಂಡೇಷನ್ ಕೋನಪ್ಪನ ಅಗ್ರಹಾರ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "JP Nagar 4th Phase",
+        "name_kan": "ಜಯಪ್ರಕಾಶ ನಗರ 4ನೇ ಹಂತ",
+        "lines": [
+          "🌸",
+          "🟠"
+        ],
+        "lineColors": [
+          "#999",
+          "#ff9800"
+        ],
+        "isTerminus": true,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "JP Nagar 5th Phase",
+        "name_kan": "ಜೆಪಿ ನಗರ ೫ನೇ ಹಂತ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Jakkasandra",
+        "name_kan": "ಜಕ್ಕಸಂದ್ರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Jakkur Cross",
+        "name_kan": "ಜಕ್ಕೂರು ಕ್ರಾಸ್",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "JLHL",
+        "name": "Jalahalli",
+        "name_kan": "ಜಾಲಹಳ್ಳಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "JPN",
+        "name": "Jaya Prakash Nagar",
+        "name_kan": "ಜಯಪ್ರಕಾಶ ನಗರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "JDHP",
+        "name": "Jayadeva Hospital",
+        "name_kan": "ಜಯದೇವ ಆಸ್ಪತ್ರೆ",
+        "lines": [
+          "🟡",
+          "🌸"
+        ],
+        "lineColors": [
+          "#fbc02d",
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "JYN",
+        "name": "Jayanagar",
+        "name_kan": "ಜಯನಗರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BGUC",
+        "name": "Jnanabharathi",
+        "name_kan": "ಜ್ಞಾನಭಾರತಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "KHB Colony",
+        "name_kan": "ಕೆ ಎಚ್ ಬಿ ಕಾಲೋನಿ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "KIAL Terminals",
+        "name_kan": "ಕೆಂಪೇಗೌಡ ಅಂತಾರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kada Agrahara Road",
+        "name_kan": "ಕಡ ಅಗ್ರಹಾರ ರಸ್ತೆ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kadabagere",
+        "name_kan": "ಕಡಬಗೆರೆ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kadirenahalli Cross",
+        "name_kan": "ಕದಿರೇನಹಳ್ಳಿ ಕ್ರಾಸ್",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KDGD",
+        "name": "Kadugodi Tree Park",
+        "name_kan": "ಕಾಡುಗೋಡಿ ಟ್ರೀ ಪಾರ್ಕ್",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kadugundanahalli",
+        "name_kan": "ಕಾಡುಗುಂಡನಹಳ್ಳಿ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kaikondrahalli",
+        "name_kan": "ಕೈಕೊಂಡ್ರಹಳ್ಳಿ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kalena Agrahara",
+        "name_kan": "ಕಾಳೇನ ಅಗ್ರಹಾರ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kalyan Nagar",
+        "name_kan": "ಕಲ್ಯಾಣ ನಗರ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kamakya Bus Depot",
+        "name_kan": "ಕಾಮಾಕ್ಯ ಬಸ್‌ ಘಟಕ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kanteerava Studio",
+        "name_kan": "ಕಂಠೀರವ ಸ್ಟುಡಿಯೋ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kasturi Nagar",
+        "name_kan": "ಕಸ್ತೂರಿ ನಗರ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kempapura",
+        "name_kan": "ಕೆಂಪಾಪುರ",
+        "lines": [
+          "🔵",
+          "🟠"
+        ],
+        "lineColors": [
+          "#2196f3",
+          "#ff9800"
+        ],
+        "isTerminus": true,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KGIT",
+        "name": "Kengeri",
+        "name_kan": "ಕೆಂಗೇರಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MLSD",
+        "name": "Kengeri Bus Terminal",
+        "name_kan": "ಕೆಂಗೇರಿ ಬಸ್ ಟರ್ಮಿನಲ್",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kodathi Circle",
+        "name_kan": "ಕೋಡತಿ ವೃತ್ತ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kodibeesanahalli",
+        "name_kan": "ಕೋಡಿಬೀಸನಹಳ್ಳಿ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Kodigehalli",
+        "name_kan": "ಕೊಡಿಗೇಹಳ್ಳಿ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "APRC",
+        "name": "Konanakunte Cross",
+        "name_kan": "ಕೋಣನಕುಂಟೆ ಕ್ರಾಸ್",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Koramangala II Block",
+        "name_kan": "ಕೋರಮಂಗಲ II ಬ್ಲಾಕ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Koramangala III Block",
+        "name_kan": "ಕೋರಮಂಗಲ III ಬ್ಲಾಕ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SRCS",
+        "name": "Krantivira Sangolli Rayanna Railway Station",
+        "name_kan": "ಕ್ರಾಂತಿವೀರ ಸಂಗೊಳ್ಳಿ ರಾಯಣ್ಣ ರೈಲು ನಿಲ್ದಾಣ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Krishna Rajendra Circle",
+        "name_kan": "ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ವೃತ್ತ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KRMT",
+        "name": "Krishna Rajendra Market",
+        "name_kan": "ಕೃಷ್ಣ ರಾಜೇಂದ್ರ ಮಾರುಕಟ್ಟೆ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KRAM",
+        "name": "Krishnarajapura (K.R.Pura)",
+        "name_kan": "ಕೃಷ್ಣರಾಜಪುರ (ಕೆ. ಆರ್. ಪುರ)",
+        "lines": [
+          "🟣",
+          "🔵"
+        ],
+        "lineColors": [
+          "#7e3eb5",
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MSRN",
+        "name": "Kudlu Gate",
+        "name_kan": "ಕೂಡ್ಲು ಗೇಟ್",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KDNH",
+        "name": "Kundalahalli",
+        "name_kan": "ಕುಂದಲಹಳ್ಳಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Lakkasandra",
+        "name_kan": "ಲಕ್ಕಸಂದ್ರ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "LBGH",
+        "name": "Lalbagh",
+        "name_kan": "ಲಾಲ್ ಬಾಗ್",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Langford Town",
+        "name_kan": "ಲ್ಯಾಂಗ್ಫೋರ್ಡ್ ಟೌನ್",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "BIET",
+        "name": "Madavara",
+        "name_kan": "ಮಾದಾವರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MIRD",
+        "name": "Magadi Road",
+        "name_kan": "ಮಾಗಡಿ ರಸ್ತೆ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KVPR",
+        "name": "Mahakavi Kuvempu Road",
+        "name_kan": "ಮಹಾಕವಿ ಕುವೆಂಪು ರಸ್ತೆ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MHLI",
+        "name": "Mahalakshmi",
+        "name_kan": "ಮಹಾಲಕ್ಷ್ಮೀ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MAGR",
+        "name": "Mahatma Gandhi Road",
+        "name_kan": "ಮಹಾತ್ಮಾ ಗಾಂಧಿ ರಸ್ತೆ",
+        "lines": [
+          "🟣",
+          "🌸"
+        ],
+        "lineColors": [
+          "#7e3eb5",
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MNJN",
+        "name": "Manjunathanagara",
+        "name_kan": "ಮಂಜುನಾಥನಗರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SPGD",
+        "name": "Mantri Square Sampige Road",
+        "name_kan": "ಮಂತ್ರಿ ಸ್ಕ್ವೇರ್, ಸಂಪಿಗೆ ರಸ್ತೆ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Marathahalli",
+        "name_kan": "ಮಾರತಹಳ್ಳಿ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Mekhri Circle",
+        "name_kan": "ಮೇಖ್ರಿ ಸರ್ಕಲ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Muthanalluru Cross",
+        "name_kan": "ಮುತ್ತನಲ್ಲೂರು ಕ್ರಾಸ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MYRD",
+        "name": "Mysuru Road",
+        "name_kan": "ಮೈಸೂರು ರಸ್ತೆ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "NIMHANS",
+        "name_kan": "ನಿಮ್ಹಾನ್ಸ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "KGWA",
+        "name": "Nadaprabhu Kempegowda Station, Majestic",
+        "name_kan": "ನಾಡಪ್ರಭು ಕೆಂಪೇಗೌಡ ನಿಲ್ದಾಣ, ಮೆಜೆಸ್ಟಿಕ್",
+        "lines": [
+          "🟣",
+          "🟢"
+        ],
+        "lineColors": [
+          "#7e3eb5",
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Nagarabhavi Circle",
+        "name_kan": "ನಾಗರಬಾವಿ ವೃತ್ತ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Nagarbhavi BDA Complex",
+        "name_kan": "ನಾಗರಬಾವಿ ಬಿ ಡಿ ಎ ಸಂಕೀರ್ಣ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "NGSA",
+        "name": "Nagasandra",
+        "name_kan": "ನಾಗಸಂದ್ರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Nagashetty Halli",
+        "name_kan": "ನಾಗಶೆಟ್ಟಿಹಲ್ಲಿ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Nagawara",
+        "name_kan": "ನಾಗವಾರ",
+        "lines": [
+          "🌸",
+          "🔵"
+        ],
+        "lineColors": [
+          "#999",
+          "#2196f3"
+        ],
+        "isTerminus": true,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "VDHP",
+        "name": "Nallurhalli",
+        "name_kan": "ನಲ್ಲೂರುಹಳ್ಳಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "NLC",
+        "name": "National College",
+        "name_kan": "ನ್ಯಾಷನಲ್ ಕಾಲೇಜ್",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "National Military School",
+        "name_kan": "ರಾಷ್ಟ್ರೀಯ ಸ್ಯೆನಿಕ ಶಾಲೆ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "PES University",
+        "name_kan": "ಪಿಇಎಸ್ ವಿಶ್ವವಿದ್ಯಾಲಯ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Palace Guttahalli",
+        "name_kan": "ಗುಟ್ಟಹಳ್ಳಿ ಅರಮನೆ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "NYHM",
+        "name": "Pantharapalya–Nayandahalli",
+        "name_kan": "ಪಂತರಪಾಳ್ಯ - ನಾಯಂಡಹಳ್ಳಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "PATG",
+        "name": "Pattanagere",
+        "name_kan": "ಪಟ್ಟಣಗೆರೆ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "ITPL",
+        "name": "Pattandur Agrahara",
+        "name_kan": "ಪಟ್ಟಂದೂರು ಅಗ್ರಹಾರ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "PEYA",
+        "name": "Peenya",
+        "name_kan": "ಪೀಣ್ಯ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "PYID",
+        "name": "Peenya Industry",
+        "name_kan": "ಪೀಣ್ಯ ಇಂಡಸ್ಟ್ರಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Pottery Town",
+        "name_kan": "ಪಾಟರಿ ಟೌನ್",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "RGDT",
+        "name": "Ragigudda",
+        "name_kan": "ರಾಗಿಗುಡ್ಡ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "RJNR",
+        "name": "Rajajinagar",
+        "name_kan": "ರಾಜಾಜಿನಗರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "RRRN",
+        "name": "Rajarajeshwari Nagar",
+        "name_kan": "ರಾಜರಾಜೇಶ್ವರಿ ನಗರ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "RVR",
+        "name": "Rashtreeya Vidyalaya Road",
+        "name_kan": "ರಾಷ್ಟ್ರೀಯ ವಿದ್ಯಾಲಯ ರಸ್ತೆ",
+        "lines": [
+          "🟢",
+          "🟡"
+        ],
+        "lineColors": [
+          "#4caf50",
+          "#fbc02d"
+        ],
+        "isTerminus": true,
+        "isInterchange": true
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SSFY",
+        "name": "Sandal Soap Factory",
+        "name_kan": "ಸ್ಯಾಂಡಲ್ ಸೋಪ್ ಫ್ಯಾಕ್ಟರಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Saraswathi Nagar",
+        "name_kan": "ಸರಸ್ವತಿ ನಗರ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Sarjapura",
+        "name_kan": "ಸರ್ಜಾಪುರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "VWIA",
+        "name": "Seetharamapalya",
+        "name_kan": "ಸೀತಾರಾಮಪಾಳ್ಯ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Shanthinagara",
+        "name_kan": "ಶಾಂತಿನಗರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Shivajinagar",
+        "name_kan": "ಶಿವಾಜಿನಗರ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "APTS",
+        "name": "Silk Institute",
+        "name_kan": "ರೇಷ್ಮೆ ಸಂಸ್ಥೆ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "CKBR",
+        "name": "Singasandra",
+        "name_kan": "ಸಿಂಗಸಂದ್ರ",
+        "lines": [
+          "🟡"
+        ],
+        "lineColors": [
+          "#fbc02d"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "MDVP",
+        "name": "Singayyanapalya",
+        "name_kan": "ಸಿಂಗಯ್ಯನಪಾಳ್ಯ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "VSWA",
+        "name": "Sir.M.Visvesvaraya Stn., Central College",
+        "name_kan": "ಸರ್ ಎಂ.ವಿಶ್ವೇಶ್ವರಯ್ಯ ನಿಲ್ದಾಣ , ಸೆಂಟ್ರಲ್ ಕಾಲೇಜು",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Sompura",
+        "name_kan": "ಸೋಂಪುರ",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SECE",
+        "name": "South End Circle",
+        "name_kan": "ಸೌತ್ ಎಂಡ್ ಸರ್ಕಲ್",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "HSLI",
+        "name": "Sri Balagangadharanatha Swamiji Station, Hosahalli",
+        "name_kan": "ಶ್ರೀ ಬಾಲಗಂಗಾಧರನಾಥ ಸ್ವಾಮೀಜಿ ನಿಲ್ದಾಣ,ಹೊಸಹಳ್ಳಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SSHP",
+        "name": "Sri Sathya Sai Hospital",
+        "name_kan": "ಶ್ರೀ ಸತ್ಯ ಸಾಯಿ ಆಸ್ಪತ್ರೆ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SPRU",
+        "name": "Srirampura",
+        "name_kan": "ಶ್ರೀರಾಮ್‍ಪುರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Sumanahalli Cross",
+        "name_kan": "ಸುಮನಹಳ್ಳಿ ಕ್ರಾಸ್",
+        "lines": [
+          "🟠",
+          "⚪"
+        ],
+        "lineColors": [
+          "#ff9800",
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Sunkadakatte",
+        "name_kan": "ಸುಂಕದಕಟ್ಟೆ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "SVRD",
+        "name": "Swami Vivekananda Road",
+        "name_kan": "ಸ್ವಾಮಿ ವಿವೇಕಾನಂದ ರಸ್ತೆ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Tannery Road",
+        "name_kan": "ಟ್ಯಾನರಿ ರಸ್ತೆ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Tavarakere",
+        "name_kan": "ತಾವರೆಕೆರೆ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "TGTP",
+        "name": "Thalaghattapura",
+        "name_kan": "ತಲಘಟ್ಟಪುರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Town Hall",
+        "name_kan": "ಟೌನ್ ಹಾಲ್",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "TTY",
+        "name": "Trinity",
+        "name_kan": "ಟ್ರಿನಿಟಿ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "VJRH",
+        "name": "Vajarahalli",
+        "name_kan": "ವಾಜರಹಳ್ಳಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Veerannapalya",
+        "name_kan": "ವೀರಣ್ಣಪಾಳ್ಯ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Venkateshpura",
+        "name_kan": "ವೆಂಕಟೇಶಪುರ",
+        "lines": [
+          "🌸"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Veterinary College",
+        "name_kan": "ವೆಟರ್ನರಿ ಕಾಲೇಜು",
+        "lines": [
+          "🔴"
+        ],
+        "lineColors": [
+          "#e53935"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "VJN",
+        "name": "Vijayanagar",
+        "name_kan": "ವಿಜಯನಗರ",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Vinayaka Layout",
+        "name_kan": "ವಿನಾಯಕ ಬಡಾವಣೆ",
+        "lines": [
+          "🟠"
+        ],
+        "lineColors": [
+          "#ff9800"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Vinayaka Nagar",
+        "name_kan": "ವಿನಾಯಕ ನಗರ",
+        "lines": [
+          "⚪"
+        ],
+        "lineColors": [
+          "#999"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "WHTM",
+        "name": "Whitefield (Kadugodi)",
+        "name_kan": "ವೈಟ್ ಫೀಲ್ಡ್ (ಕಾಡುಗೋಡಿ)",
+        "lines": [
+          "🟣"
+        ],
+        "lineColors": [
+          "#7e3eb5"
+        ],
+        "isTerminus": true,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "PUTH",
+        "name": "Yelachenahalli",
+        "name_kan": "ಯಲಚೇನಹಳ್ಳಿ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "[TBC]",
+        "name": "Yelahanka",
+        "name_kan": "ಯಲಹಂಕ",
+        "lines": [
+          "🔵"
+        ],
+        "lineColors": [
+          "#2196f3"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "code": "YPM",
+        "name": "Yeshwanthpur",
+        "name_kan": "ಯಶವಂತಪುರ",
+        "lines": [
+          "🟢"
+        ],
+        "lineColors": [
+          "#4caf50"
+        ],
+        "isTerminus": false,
+        "isInterchange": false
+      },
+      "geometry": null
+    }
+  ],
+  "metadata": {
+    "lines": {
+      "🟣": "#7e3eb5",
+      "🟢": "#4caf50",
+      "🟡": "#fbc02d",
+      "🔵": "#2196f3",
+      "🟠": "#ff9800",
+      "🔴": "#e53935"
+    },
+    "note": "Geometry is null in this file. The scrolly map (Chapter 1) hand-codes the line paths."
+  }
+}

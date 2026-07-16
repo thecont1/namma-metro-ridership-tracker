@@ -1,0 +1,182 @@
+[
+  {
+    "date":"2024-10-31",
+    "label":"Diwali",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2024-11-01",
+    "label":"Rajayotsava Day",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2024-12-24",
+    "label":"Christmas Eve",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2024-12-25",
+    "label":"Christmas Day",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2024-12-31",
+    "label":"New Year's Eve",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-01-01",
+    "label":"New Year's Day",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-01-14",
+    "label":"Makara Sankranti",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-01-25",
+    "label":"Ranji Trophy (Bangalore)",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-01-26",
+    "label":"Republic Day",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-02-08",
+    "label":"Ed Sheeran Concert",
+    "type":"concert",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-09",
+    "label":"Ed Sheeran Concert, Fare Hike",
+    "type":"fare_hike",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-10",
+    "label":"Aero India D1",
+    "type":"civic",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-11",
+    "label":"Aero India D2",
+    "type":"civic",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-12",
+    "label":"Aero India D3",
+    "type":"civic",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-13",
+    "label":"Aero India D4",
+    "type":"civic",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-14",
+    "label":"Aero India D5, Valentine's Day",
+    "type":"civic",
+    "weight":"primary"
+  },
+  {
+    "date":"2025-02-26",
+    "label":"Mahashivratri",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-03-09",
+    "label":"IND v. PAK Champions Trophy Final (Dubai)",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-03-14",
+    "label":"Holi",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-03-22",
+    "label":"Karnataka Bandh",
+    "type":"bandh",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-03-23",
+    "label":"Toyota Bidadi Half Marathon",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-03-30",
+    "label":"Ugadi",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-03-31",
+    "label":"Eid-ul-Fitr",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-04-10",
+    "label":"Mahavir Jayanti",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-04-14",
+    "label":"Ambedkar Jayanti",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-04-18",
+    "label":"Good Friday",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-04-20",
+    "label":"Easter Sunday",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-04-27",
+    "label":"TCS World 10K Marathon",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-04-30",
+    "label":"Basava Jayanti",
+    "type":"festival",
+    "weight":"secondary"
+  },
+  {
+    "date":"2025-05-01",
+    "label":"May Day",
+    "type":"festival",
+    "weight":"secondary"
+  }
+]
