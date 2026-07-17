@@ -4,16 +4,26 @@
   "mean": 784567,
   "count": 123,
   "buckets": {
-    "p20": 708847,
-    "p40": 790981,
-    "p60": 827768,
-    "p80": 869379
+    "p2": 490541,
+    "p5": 572234,
+    "p10": 640223,
+    "p25": 762396,
+    "p50": 802511,
+    "p75": 864165,
+    "p90": 879857,
+    "p95": 891014,
+    "p98": 902035
   },
   "bucketLabels": {
-    "p20": "20th percentile",
-    "p40": "40th percentile",
-    "p60": "60th percentile",
-    "p80": "80th percentile"
+    "p2": "2th percentile",
+    "p5": "5th percentile",
+    "p10": "10th percentile",
+    "p25": "25th percentile",
+    "p50": "50th percentile",
+    "p75": "75th percentile",
+    "p90": "90th percentile",
+    "p95": "95th percentile",
+    "p98": "98th percentile"
   },
-  "bucketCount": 5
+  "bucketCount": 9
 }
