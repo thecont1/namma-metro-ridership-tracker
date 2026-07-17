@@ -1,0 +1,19 @@
+{
+  "min": 402795,
+  "max": 909522,
+  "mean": 784567,
+  "count": 123,
+  "buckets": {
+    "p20": 708847,
+    "p40": 790981,
+    "p60": 827768,
+    "p80": 869379
+  },
+  "bucketLabels": {
+    "p20": "20th percentile",
+    "p40": "40th percentile",
+    "p60": "60th percentile",
+    "p80": "80th percentile"
+  },
+  "bucketCount": 5
+}
