@@ -1,0 +1,298 @@
+{
+  "modes": [
+    "smartcard",
+    "token",
+    "ncmc",
+    "groupTicket",
+    "qrNammaMetro",
+    "qrWhatsApp",
+    "qrPaytm",
+    "total"
+  ],
+  "modeLabels": {
+    "smartcard": "Smart Card",
+    "token": "Token",
+    "ncmc": "NCMC",
+    "groupTicket": "Group Ticket",
+    "qrNammaMetro": "QR NammaMetro",
+    "qrWhatsApp": "QR WhatsApp",
+    "qrPaytm": "QR Paytm",
+    "total": "Total"
+  },
+  "dowNames": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ],
+  "rows": [
+    {
+      "dow": 0,
+      "dowName": "Monday",
+      "n": 18,
+      "smartcard": {
+        "mean": 414087.9,
+        "std": 65644.0
+      },
+      "token": {
+        "mean": 205828.3,
+        "std": 13634.6
+      },
+      "ncmc": {
+        "mean": 14520.2,
+        "std": 4200.2
+      },
+      "groupTicket": {
+        "mean": 351.1,
+        "std": 282.9
+      },
+      "qrNammaMetro": {
+        "mean": 51273.7,
+        "std": 4889.2
+      },
+      "qrWhatsApp": {
+        "mean": 96657.1,
+        "std": 8789.4
+      },
+      "qrPaytm": {
+        "mean": 33782.9,
+        "std": 3450.5
+      },
+      "total": {
+        "mean": 816501.1,
+        "std": 81829.7
+      }
+    },
+    {
+      "dow": 1,
+      "dowName": "Tuesday",
+      "n": 19,
+      "smartcard": {
+        "mean": 427846.1,
+        "std": 85014.8
+      },
+      "token": {
+        "mean": 199378.6,
+        "std": 38870.9
+      },
+      "ncmc": {
+        "mean": 15326.1,
+        "std": 4718.4
+      },
+      "groupTicket": {
+        "mean": 440.4,
+        "std": 226.6
+      },
+      "qrNammaMetro": {
+        "mean": 46194.8,
+        "std": 11025.3
+      },
+      "qrWhatsApp": {
+        "mean": 88082.6,
+        "std": 15949.8
+      },
+      "qrPaytm": {
+        "mean": 34830.5,
+        "std": 6965.7
+      },
+      "total": {
+        "mean": 812099.0,
+        "std": 92252.7
+      }
+    },
+    {
+      "dow": 2,
+      "dowName": "Wednesday",
+      "n": 17,
+      "smartcard": {
+        "mean": 430477.5,
+        "std": 87568.0
+      },
+      "token": {
+        "mean": 191278.8,
+        "std": 39982.3
+      },
+      "ncmc": {
+        "mean": 14991.5,
+        "std": 4478.5
+      },
+      "groupTicket": {
+        "mean": 397.5,
+        "std": 284.4
+      },
+      "qrNammaMetro": {
+        "mean": 49424.8,
+        "std": 6767.0
+      },
+      "qrWhatsApp": {
+        "mean": 94843.5,
+        "std": 15175.1
+      },
+      "qrPaytm": {
+        "mean": 33694.5,
+        "std": 5163.4
+      },
+      "total": {
+        "mean": 815108.1,
+        "std": 88076.4
+      }
+    },
+    {
+      "dow": 3,
+      "dowName": "Thursday",
+      "n": 18,
+      "smartcard": {
+        "mean": 447411.6,
+        "std": 59594.7
+      },
+      "token": {
+        "mean": 195373.1,
+        "std": 13050.9
+      },
+      "ncmc": {
+        "mean": 14956.6,
+        "std": 3604.9
+      },
+      "groupTicket": {
+        "mean": 504.1,
+        "std": 394.6
+      },
+      "qrNammaMetro": {
+        "mean": 46655.1,
+        "std": 11575.7
+      },
+      "qrWhatsApp": {
+        "mean": 88073.5,
+        "std": 21817.4
+      },
+      "qrPaytm": {
+        "mean": 32055.8,
+        "std": 8123.1
+      },
+      "total": {
+        "mean": 825029.7,
+        "std": 53873.6
+      }
+    },
+    {
+      "dow": 4,
+      "dowName": "Friday",
+      "n": 20,
+      "smartcard": {
+        "mean": 414479.9,
+        "std": 41313.3
+      },
+      "token": {
+        "mean": 201521.8,
+        "std": 14736.3
+      },
+      "ncmc": {
+        "mean": 14133.7,
+        "std": 3616.1
+      },
+      "groupTicket": {
+        "mean": 485.4,
+        "std": 351.8
+      },
+      "qrNammaMetro": {
+        "mean": 49037.0,
+        "std": 12082.0
+      },
+      "qrWhatsApp": {
+        "mean": 99331.2,
+        "std": 8498.3
+      },
+      "qrPaytm": {
+        "mean": 34803.6,
+        "std": 3808.2
+      },
+      "total": {
+        "mean": 813792.6,
+        "std": 59616.4
+      }
+    },
+    {
+      "dow": 5,
+      "dowName": "Saturday",
+      "n": 18,
+      "smartcard": {
+        "mean": 309889.2,
+        "std": 62575.5
+      },
+      "token": {
+        "mean": 222431.9,
+        "std": 49287.0
+      },
+      "ncmc": {
+        "mean": 9595.7,
+        "std": 1914.9
+      },
+      "groupTicket": {
+        "mean": 686.8,
+        "std": 294.2
+      },
+      "qrNammaMetro": {
+        "mean": 56136.1,
+        "std": 8872.0
+      },
+      "qrWhatsApp": {
+        "mean": 116495.7,
+        "std": 19913.8
+      },
+      "qrPaytm": {
+        "mean": 39053.8,
+        "std": 7118.3
+      },
+      "total": {
+        "mean": 754289.2,
+        "std": 92342.8
+      }
+    },
+    {
+      "dow": 6,
+      "dowName": "Sunday",
+      "n": 13,
+      "smartcard": {
+        "mean": 163189.1,
+        "std": 32809.6
+      },
+      "token": {
+        "mean": 238846.6,
+        "std": 38251.4
+      },
+      "ncmc": {
+        "mean": 5360.7,
+        "std": 963.6
+      },
+      "groupTicket": {
+        "mean": 515.5,
+        "std": 262.2
+      },
+      "qrNammaMetro": {
+        "mean": 50771.4,
+        "std": 8266.7
+      },
+      "qrWhatsApp": {
+        "mean": 107656.0,
+        "std": 18930.9
+      },
+      "qrPaytm": {
+        "mean": 34765.4,
+        "std": 6258.2
+      },
+      "total": {
+        "mean": 601104.6,
+        "std": 89555.0
+      }
+    }
+  ],
+  "window": {
+    "start": "2024-11-14",
+    "end": "2025-04-16"
+  },
+  "ddof": 1,
+  "note": "std is sample standard deviation (ddof=1). n is the count of days observed for that DOW in the editorial window."
+}
