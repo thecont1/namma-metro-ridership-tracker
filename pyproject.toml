@@ -10,6 +10,7 @@ dependencies = [
     "nbformat>=5.10.4",
     "numpy>=2.4.2",
     "pandas>=3.0.1",
+    "pillow>=12.3.0",
     "pykernel>=0.1.6",
     "scipy>=1.17.1",
     "seaborn>=0.13.2",
