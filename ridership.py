@@ -41,6 +41,14 @@ except WebDriverException as e:
     logger.error(f"Error initializing the web driver: {e}")
     exit(1)
 
+# Canonical column order — new categories must be appended here
+EXPECTED_COLUMNS = [
+    'Record Date', 'Total Smart Cards', 'Stored Value Card',
+    'One Day Pass', 'Three Day Pass', 'Five Day Pass',
+    'Total Tokens', 'Total NCMC', 'Group Ticket',
+    'Total QR', 'QR NammaMetro', 'QR WhatsApp', 'QR Paytm', 'QR ONDC'
+]
+
 # Dictionary to store ridership data
 day_record = {}
 
@@ -111,6 +119,12 @@ try:
     day_record = pd.DataFrame(day_record)
     if 'Tokens' in day_record.columns:
         day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
+    
+    # Ensure all expected columns exist and are in canonical order
+    for col in EXPECTED_COLUMNS:
+        if col not in day_record.columns:
+            day_record[col] = 0
+    day_record = day_record[EXPECTED_COLUMNS]
     
     logger.info("Data row collected:   \n")
     # Print the dataframe in a more readable format
