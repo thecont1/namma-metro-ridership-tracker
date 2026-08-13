@@ -14,4 +14,5 @@ dependencies = [
     "pykernel>=0.1.6",
     "scipy>=1.17.1",
     "seaborn>=0.13.2",
+    "selenium>=4.47.0",
 ]
