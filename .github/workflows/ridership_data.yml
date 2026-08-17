@@ -160,3 +160,11 @@ jobs:
         # Only commit if there are changes
         git diff --quiet && git diff --staged --quiet || git commit -m "daily dataset append [Actions]"
         git push
+
+    - name: Refresh metro-dash dataset
+      if: success()
+      continue-on-error: true
+      run: |
+        curl -s -S -f -X POST "https://namma.thecontrarian.in/api/refresh" \
+          -H "X-Refresh-Secret: ${{ secrets.METRO_DASH_REFRESH_SECRET }}" \
+          -m 30
