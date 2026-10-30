@@ -8,3 +8,11 @@ WARP.md
 # Editor/agent configs
 .hermes/
 .vscode/
+
+# Local tool binaries (lightpanda trial)
+.tools/
+
+# Lightpanda experiment artifacts (HTML dumps + site JS are large)
+experiments/lightpanda/out/*.html
+experiments/lightpanda/out/ridership_page.js
+experiments/lightpanda/out/fetch_stderr.log

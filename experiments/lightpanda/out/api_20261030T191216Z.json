@@ -1,0 +1,18 @@
+{
+  "engine": "api",
+  "engine_version": "unversioned-json-endpoint",
+  "token_source": "extracted from site JS bundle at run time (not stored)",
+  "run_utc": "20261030T191216Z",
+  "url": "https://english.bmrc.co.in:8282/users/getridership",
+  "record_date": null,
+  "values": {},
+  "missing_columns": [],
+  "raw_response": null,
+  "elapsed_seconds": 1.566,
+  "peak_rss_mb": 37.6,
+  "errors": [
+    "fatal: RuntimeError: API_KEY not found in ridership.js bundle",
+    "missing record date",
+    "missing core values: ['Total Smart Cards', 'Total Tokens', 'Total QR']"
+  ]
+}

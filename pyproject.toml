@@ -16,3 +16,8 @@ dependencies = [
     "seaborn>=0.13.2",
     "selenium>=4.47.0",
 ]
+
+[dependency-groups]
+dev = [
+    "playwright>=1.64.1",
+]

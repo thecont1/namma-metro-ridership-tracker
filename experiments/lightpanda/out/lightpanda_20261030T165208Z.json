@@ -1,0 +1,19 @@
+{
+  "engine": "lightpanda",
+  "lightpanda_version": "1.1.0-nightly.11326+948d77378",
+  "cdp_url": "ws://127.0.0.1:9223",
+  "run_utc": "20261030T165208Z",
+  "url": "https://english.bmrc.co.in/ridership/",
+  "record_date": null,
+  "values": {},
+  "missing_columns": [],
+  "raw_cards": [],
+  "english_labels": null,
+  "elapsed_seconds": 2.234,
+  "peak_rss_mb": 56.5,
+  "errors": [
+    "fatal: Error: Page.goto: Protocol error (Page.navigate): No page on the STARTUP session; create a real target with Target.createTarget\nCall log:\n  - navigating to \"https://english.bmrc.co.in/ridership/\", waiting until \"load\"\n",
+    "missing record date",
+    "missing core values: ['Total Smart Cards', 'Total Tokens', 'Total QR']"
+  ]
+}

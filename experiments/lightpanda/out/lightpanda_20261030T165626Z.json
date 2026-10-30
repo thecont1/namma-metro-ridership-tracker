@@ -1,0 +1,37 @@
+{
+  "engine": "lightpanda",
+  "lightpanda_version": "1.1.0-nightly.11326+948d77378",
+  "cdp_url": "ws://127.0.0.1:9223",
+  "run_utc": "20261030T165626Z",
+  "url": "https://english.bmrc.co.in/ridership/",
+  "record_date": "22-10-2026",
+  "values": {
+    "Record Date": "22-10-2026",
+    "Total Smart Cards": 318626,
+    "Stored Value Card": 318370,
+    "One Day Pass": 164,
+    "Three Day Pass": 36,
+    "Five Day Pass": 56,
+    "Total Tokens": 259859,
+    "Total NCMC": 218354,
+    "Group Ticket": 224,
+    "Total QR": 230369,
+    "QR NammaMetro": 86515,
+    "QR WhatsApp": 89458,
+    "QR Paytm": 0,
+    "QR ONDC": 54396
+  },
+  "missing_columns": [],
+  "raw_cards": [
+    "Total Smart Cards:318626\nStored Value Card:318370\nOne Day Pass:164\nThree Day Pass:36\nFive Day Pass:56",
+    "Tokens:259859",
+    "Total NCMC:218354",
+    "Group Ticket:224",
+    "Total QR:230369\nQR NammaMetro:86515\nQR WhatsApp: 89458\nQR Paytm:0\nQR ONDC: 54396"
+  ],
+  "english_labels": true,
+  "elapsed_seconds": 2.69,
+  "peak_rss_mb": 50.7,
+  "errors": [],
+  "toggle_clicked": true
+}
