@@ -1,16 +1,14 @@
 #!/usr/bin/env python
 
-import pandas as pd
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException, ElementClickInterceptedException
-from pathlib import Path
-import time
+import json
 import os
+import time
 import logging
+from pathlib import Path
+
+import pandas as pd
+
+from src.bmrc_api import fetch_ridership, map_record, PAGE_URL
 
 # Set up logging
 logging.basicConfig(
@@ -22,25 +20,6 @@ logger = logging.getLogger(__name__)
 # Print script run time
 print(f"Script run time: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
 
-# Selenium options required to create a 'headless' browser
-options = Options()
-options.add_argument("--blink-settings=imagesEnabled=false")
-options.add_argument("--headless=new")
-options.add_argument("--disable-gpu")
-options.add_argument("--no-sandbox")
-options.add_argument("--disable-dev-shm-usage")  # Added for CI environments
-options.add_argument("--window-size=1920,1080")  # Set a specific window size
-options.add_argument("--incognito")
-options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.77 Safari/537.37")
-
-try:
-    driver = webdriver.Chrome(options=options)
-    wait = WebDriverWait(driver, 20)  # wait up to 20 seconds for elements to load
-    logger.info("Chrome driver initialized successfully")
-except WebDriverException as e:
-    logger.error(f"Error initializing the web driver: {e}")
-    exit(1)
-
 # Canonical column order — new categories must be appended here
 EXPECTED_COLUMNS = [
     'Record Date', 'Total Smart Cards', 'Stored Value Card',
@@ -49,108 +28,64 @@ EXPECTED_COLUMNS = [
     'Total QR', 'QR NammaMetro', 'QR WhatsApp', 'QR Paytm', 'QR ONDC'
 ]
 
-# These must actually be parsed from the page for a run to be valid;
-# missing values here mean the scrape failed, not that ridership was 0.
+# These must actually be present in the API response for a run to be
+# valid; missing values here mean the fetch failed, not that ridership
+# was 0.
 REQUIRED_COLUMNS = ['Record Date', 'Total Smart Cards', 'Total Tokens', 'Total QR']
 
-# Dictionary to store ridership data
-day_record = {}
-
+# Self-healing fetch: the site's API config (key, port, endpoint path)
+# is re-discovered from whatever JS bundle is currently deployed, so
+# key rotation / renames / endpoint moves self-correct. The token is
+# never written to disk, logged, or committed.
+started = time.monotonic()
 try:
-    # Load ridership page from BMRCL website
-    logger.info("Accessing BMRCL website")
-    driver.get("https://english.bmrc.co.in/ridership/")
-    
-    # Attempt to click on Kannada toggle button
-    try:
-        logger.info("Waiting for language toggle button")
-        toggle_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".link.top-navcustom-text")))
-        time.sleep(10)  # Allow extra time for JavaScript to load translated data
-        toggle_button.click()
-        logger.info("Language toggle button clicked")
-    except (NoSuchElementException, TimeoutException, ElementClickInterceptedException) as e:
-        logger.error(f"Error with language toggle button: {e}")
-        driver.quit()
-        exit(1)
+    record, meta = fetch_ridership(PAGE_URL)
+except RuntimeError as e:
+    logger.error(f"API fetch failed: {e}")
+    exit(1)
+logger.info(
+    f"API fetch completed in {round(time.monotonic() - started, 3)}s "
+    f"({meta.get('key_source')}, {len(meta.get('attempts', []))} attempt(s))"
+)
 
-    # Results are published with a lag of about one day. 
-    # So get the date on the page rather than date.today()
-    try:
-        record_date_element = wait.until(EC.visibility_of_element_located((By.TAG_NAME, "h3")))
-        record_date = record_date_element.text
-        logger.info(f"Found record date: {record_date}")
-    except (NoSuchElementException, TimeoutException) as e:
-        logger.error(f"Error finding record date element: {e}")
-        driver.quit()
-        exit(1)
+# Save the raw response for debugging if running in GitHub Actions
+if os.environ.get('GITHUB_ACTIONS'):
+    Path("debug_response.json").write_text(json.dumps(record, indent=2))
+    logger.info("Debug response saved")
 
-    # Initialize dict to store ridership data
-    day_record['Record Date'] = [record_date.split()[-1]]  # Extracting date part
-    
-    # Take a screenshot for debugging if running in GitHub Actions
-    if os.environ.get('GITHUB_ACTIONS'):
-        driver.save_screenshot("debug_screenshot.png")
-        logger.info("Debug screenshot saved")
+# Results are published with a lag of about one day.
+# So read the date from the response rather than date.today()
+mapped = map_record(record)
+record_date = mapped.get('Record Date')
+logger.info(f"Found record date: {record_date}")
 
-    # Parse html for remaining data points and store in pandas dataframe
-    try:
-        logger.info("Extracting ridership data")
-        data_points = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".features-card.achivement-area.bg-color")))
-        if not data_points:
-            logger.warning("No ridership data elements found")
-        
-        for l1 in data_points:
-            for l2 in l1.text.split('\n'):
-                data = l2.split(': ')
-                if len(data) == 2:
-                    try:
-                        # Try to convert to integer, but handle non-numeric data gracefully
-                        day_record[data[0]] = [int(data[1].replace(',', ''))]
-                        # Simplified logging - removed detailed extraction logs
-                        pass
-                    except ValueError:
-                        # Simplified logging - removed warnings for non-numeric values
-                        pass
-                        day_record[data[0]] = [data[1]]
-                else:
-                    # Simplified logging - removed warnings for unexpected formats
-                    pass
-    except (NoSuchElementException, TimeoutException, ValueError) as e:
-        logger.error(f"Error while parsing data points: {e}")
-        driver.quit()
-        exit(1)
+# Build the row in canonical order
+day_record = {col: [mapped[col]] for col in EXPECTED_COLUMNS if col in mapped}
+day_record = pd.DataFrame(day_record)
 
-    day_record = pd.DataFrame(day_record)
-    if 'Tokens' in day_record.columns:
-        day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
-    
-    # Require the date and core columns to have been parsed before filling
-    # defaults — otherwise the zero-fill below makes a failed scrape look
-    # valid and writes an all-zero row.
-    missing_required = [
-        col for col in REQUIRED_COLUMNS
-        if col not in day_record.columns
-        or pd.isna(day_record[col].iloc[0])
-        or day_record[col].iloc[0] == ''
-    ]
-    if missing_required:
-        logger.error(f"Required columns missing from page: {missing_required}. Refusing to write CSV.")
-        exit(1)
+# Require the date and core columns to be present before filling
+# defaults — otherwise the zero-fill below makes a failed fetch look
+# valid and writes an all-zero row.
+missing_required = [
+    col for col in REQUIRED_COLUMNS
+    if col not in day_record.columns
+    or pd.isna(day_record[col].iloc[0])
+    or day_record[col].iloc[0] == ''
+]
+if missing_required:
+    logger.error(f"Required columns missing from API response: {missing_required}. Refusing to write CSV.")
+    exit(1)
 
-    # Ensure all expected columns exist and are in canonical order
-    for col in EXPECTED_COLUMNS:
-        if col not in day_record.columns:
-            day_record[col] = 0
-    day_record = day_record[EXPECTED_COLUMNS]
-    
-    logger.info("Data row collected:   \n")
-    # Print the dataframe in a more readable format
-    print(day_record.to_string(index=False))
-    print()
+# Ensure all expected columns exist and are in canonical order
+for col in EXPECTED_COLUMNS:
+    if col not in day_record.columns:
+        day_record[col] = 0
+day_record = day_record[EXPECTED_COLUMNS]
 
-finally:
-    driver.quit()
-    logger.info("Browser closed")
+logger.info("Data row collected:   \n")
+# Print the dataframe in a more readable format
+print(day_record.to_string(index=False))
+print()
 
 # Locate CSV file in the same directory as the script
 script_dir = Path(__file__).parent
@@ -175,19 +110,19 @@ if has_valid_data:
                     day_record[column] = day_record[column].astype(int)
                 except (ValueError, TypeError):
                     pass
-        
+
         if filename.exists() and filename.is_file():
             logger.info("Appending to existing CSV file")
             day_record.to_csv(filename, mode='a', header=False, index=False, lineterminator='\n')
         else:
             logger.info("Creating new CSV file")
             day_record.to_csv(filename, mode='w', header=True, index=False, lineterminator='\n')
-        
+
         # Optimize dataset by removing duplicates and rewrite
         try:
             logger.info("Optimizing dataset (removing duplicates)")
             df = pd.read_csv(filename).drop_duplicates(subset=['Record Date'], keep='last', ignore_index=True)
-            
+
             # Convert all numeric columns to integers
             for column in df.columns:
                 if column != 'Record Date':  # Skip the date column
@@ -195,9 +130,9 @@ if has_valid_data:
                         df[column] = df[column].astype(int)
                     except (ValueError, TypeError):
                         pass
-            
+
             logger.info("Converted numerical columns to integer type")
-            
+
             # Save without trailing commas
             df.to_csv(filename, mode='w', header=True, index=False, lineterminator='\n')
             logger.info(f"Final dataset has {len(df)} records")

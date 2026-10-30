@@ -16,3 +16,5 @@ WARP.md
 experiments/lightpanda/out/*.html
 experiments/lightpanda/out/ridership_page.js
 experiments/lightpanda/out/fetch_stderr.log
+out/
+__pycache__/

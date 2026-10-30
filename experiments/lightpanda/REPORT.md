@@ -37,7 +37,7 @@ multi-day soak is still open follow-up work.
 # terminal 1
 LIGHTPANDA_DISABLE_TELEMETRY=true .tools/lightpanda serve --host 127.0.0.1 --port 9223
 # terminal 2
-uv run python experiments/lightpanda/api_fetch.py       # browser-free route
+uv run python src/api_fetch.py       # browser-free route (now in src/)
 uv run python experiments/lightpanda/ridership_lp.py
 uv run python experiments/lightpanda/chrome_baseline.py
 uv run python experiments/lightpanda/compare.py [a.json b.json]  # appends a row above

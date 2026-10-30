@@ -16,8 +16,8 @@ from pathlib import Path
 
 from bmrc_api import fetch_ridership, map_record, PAGE_URL
 
-EXPERIMENT_DIR = Path(__file__).resolve().parent
-OUT_DIR = EXPERIMENT_DIR / "out"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+OUT_DIR = REPO_ROOT / "out"
 
 EXPECTED_COLUMNS = [
     'Record Date', 'Total Smart Cards', 'Stored Value Card',
