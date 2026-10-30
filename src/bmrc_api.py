@@ -22,6 +22,7 @@ attempts log that never contains the key material itself.
 
 import json
 import re
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -143,7 +144,10 @@ def _try(url, key, timeout):
         return None, f"HTTP {e.code}"
     except (ValueError, urllib.error.URLError, TimeoutError) as e:
         return None, type(e).__name__
-    return _first_record(payload), "ok"
+    rec = _first_record(payload)
+    if rec is not None and not map_record(rec):
+        rec = None  # parsed, but maps to no canonical column — keep trying
+    return rec, "ok"
 
 
 def map_record(record):
@@ -156,24 +160,42 @@ def map_record(record):
     }
 
 
-def fetch_ridership(page_url=PAGE_URL, timeout=30):
+def fetch_ridership(page_url=PAGE_URL, timeout=30, budget=270, reserve=20):
     """Return (record, meta); raise RuntimeError with an attempts log.
+
+    One monotonic deadline governs the page fetch, every bundle fetch,
+    and every candidate request — each gets only the remaining budget.
+    `reserve` seconds are always kept back for the unauthenticated
+    fallback and failure diagnostics, so total wall time stays under
+    `budget` (< the workflow's 300 s hard timeout).
 
     meta never contains key material — candidates are referenced by the
     variable-name pattern that produced them.
     """
     attempts = []
+    deadline = time.monotonic() + budget
     parsed = urllib.parse.urlparse(page_url)
     origin = f"{parsed.scheme}://{parsed.hostname}"
 
-    html = _get(page_url, timeout=timeout)
+    def left():
+        return deadline - time.monotonic()
+
+    def req_timeout():
+        # what a request may use while still leaving `reserve` for fallback
+        return min(timeout, max(left() - reserve, 0.5))
+
+    html = _get(page_url, timeout=req_timeout())
     srcs = _script_urls(html, page_url)
     srcs.sort(key=lambda s: 0 if "ridership" in s else 1)
 
     # walk bundles: ridership chunk first, extract port/paths/keys
+    budget_hit = False
     for src in srcs:
+        if left() - reserve <= 0:
+            attempts.append("time budget exhausted")
+            break
         try:
-            js = _get(src, timeout=timeout)
+            js = _get(src, timeout=req_timeout())
         except Exception as e:  # noqa: BLE001
             attempts.append(f"bundle {src}: {type(e).__name__}")
             continue
@@ -188,10 +210,16 @@ def fetch_ridership(page_url=PAGE_URL, timeout=30):
             f"{len(keys)} key candidate(s), paths={paths}, port={port}"
         )
         for path in paths:
+            if budget_hit:
+                break
             full = path if path.startswith(api_prefix) else api_prefix + path
             url = f"{origin}:{port}{full}"
             for name, key in keys:
-                rec, why = _try(url, key, timeout)
+                if left() - reserve <= 0:
+                    attempts.append("time budget exhausted during candidates")
+                    budget_hit = True
+                    break
+                rec, why = _try(url, key, req_timeout())
                 attempts.append(f"key({name}) {url}: {why}")
                 if rec is not None:
                     return rec, {
@@ -202,7 +230,7 @@ def fetch_ridership(page_url=PAGE_URL, timeout=30):
     # last resort: unauthenticated default endpoint, in case the site
     # dropped or proxied auth (short timeout — it may hang, not 401)
     url = f"{origin}:{DEFAULT_API_PORT}{DEFAULT_API_PATH}"
-    rec, why = _try(url, None, min(timeout, 15))
+    rec, why = _try(url, None, max(min(timeout, 15, left() - 5), 0.5))
     attempts.append(f"no-auth {url}: {why}")
     if rec is not None:
         return rec, {"attempts": attempts, "key_source": "none (unauthenticated)"}

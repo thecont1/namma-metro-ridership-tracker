@@ -70,8 +70,10 @@ def main():
         exit_code = 1
 
     report["elapsed_seconds"] = round(time.monotonic() - started, 3)
+    # ru_maxrss is bytes on macOS, kilobytes on Linux/other platforms
+    rss_divisor = (1024 * 1024) if sys.platform == "darwin" else 1024
     report["peak_rss_mb"] = round(
-        resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / (1024 * 1024), 1
+        resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / rss_divisor, 1
     )
 
     if report["record_date"] is None:

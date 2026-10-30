@@ -40,8 +40,13 @@ REQUIRED_COLUMNS = ['Record Date', 'Total Smart Cards', 'Total Tokens', 'Total Q
 started = time.monotonic()
 try:
     record, meta = fetch_ridership(PAGE_URL)
-except RuntimeError as e:
-    logger.error(f"API fetch failed: {e}")
+except Exception as e:
+    logger.error(f"API fetch failed: {type(e).__name__}: {e}")
+    if os.environ.get('GITHUB_ACTIONS'):
+        Path("debug_response.json").write_text(json.dumps(
+            {"error": f"{type(e).__name__}: {e}"}, indent=2
+        ))
+        logger.info("Debug response saved")
     exit(1)
 logger.info(
     f"API fetch completed in {round(time.monotonic() - started, 3)}s "

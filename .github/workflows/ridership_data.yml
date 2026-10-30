@@ -7,9 +7,14 @@ on:
     - cron: '22 17 * * *' # 17:22 UTC / 22:52 IST
   workflow_dispatch:  # Allows manual trigger for testing
 
+permissions:
+  contents: read
+
 jobs:
   collect-data:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # required for the git push step
 
     steps:
     - name: Check out repository
