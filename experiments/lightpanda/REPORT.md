@@ -95,6 +95,17 @@ record's field names map 1:1 onto `EXPECTED_COLUMNS`
 `QRNammaMetro`→`QR NammaMetro`, `ONDC`→`QR ONDC`; `TotalPassengers` is
 extra). Every value matches both browser engines' output exactly.
 
+**Self-healing (`bmrc_api.py`)**: key rotation already self-corrects —
+the token is re-read from whatever bundle is deployed on each run. Beyond
+that, the client re-discovers port, endpoint path, and key candidates
+from a variable-name ladder across all of the page's script bundles,
+tries `(path, key)` pairs until one returns a record, tolerates
+`results|result|data|records|items|rows` response shapes, and falls back
+to an unauthenticated probe last. Its `attempts` log names which
+bundle/path/key-source won without recording key material. A wholly new
+auth scheme or unrecognizable payload still fails — loudly — which is
+where the browser tiers remain the fallback.
+
 ## Recommendation
 
 **Go for the API route first, Lightpanda second, Chrome last.**

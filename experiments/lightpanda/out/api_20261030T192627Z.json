@@ -1,0 +1,19 @@
+{
+  "engine": "api",
+  "engine_version": "unversioned-json-endpoint",
+  "token_source": "extracted from site JS bundle at run time (not stored)",
+  "run_utc": "20261030T192627Z",
+  "url": "https://english.bmrc.co.in/ridership/",
+  "record_date": null,
+  "values": {},
+  "missing_columns": [],
+  "raw_response": null,
+  "discovery": null,
+  "elapsed_seconds": 35.886,
+  "peak_rss_mb": 60.6,
+  "errors": [
+    "fatal: RuntimeError: all API candidates exhausted. no-auth https://english.bmrc.co.in:8282/api/users/getridership: TimeoutError | bundle ridership.js?ts=1793388387315: 1 key candidate(s), paths=['/users/getridership'], port=8282 | key(API_KEY) https://english.bmrc.co.in:8282/users/getridership: HTTP 404 | bundle main.js?ts=1793388387315: 0 key candidate(s), paths=['/api/users/getridership'], port=8282 | bundle _app.js?ts=1793388387315: 0 key candidate(s), paths=['/api/users/getridership'], port=8282 | bundle _buildManifest.js?ts=1793388387315: 0 key candidate(s), paths=['/api/users/getridership'], port=8282",
+    "missing record date",
+    "missing core values: ['Total Smart Cards', 'Total Tokens', 'Total QR']"
+  ]
+}
