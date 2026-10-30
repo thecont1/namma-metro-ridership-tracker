@@ -10,150 +10,49 @@ on:
 jobs:
   collect-data:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Check out repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
-    
+
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
-    
-    - name: Cache pip dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-    
-    - name: Cache ChromeDriver
-      uses: actions/cache@v3
-      id: chromedriver-cache
-      with:
-        path: ~/.cache/chromedriver
-        key: ${{ runner.os }}-chromedriver-${{ hashFiles('**/.github/workflows/ridership_data.yml') }}
-    
-    - name: Install Chrome (optimized)
-      run: |
-        echo "Installing Chrome (optimized method)..."
-        # Use Chrome direct download instead of apt-get for speed
-        wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /tmp/chrome.deb
-        sudo dpkg -i --force-depends /tmp/chrome.deb || true
-        sudo apt-get install -f -y --no-install-recommends
-        echo "Chrome installation completed"
-    
-    - name: Install ChromeDriver
-      run: |
-        # Create cache directory
-        mkdir -p ~/.cache/chromedriver
-        
-        # Get Chrome version
-        CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d. -f1)
-        echo "Detected Chrome version: $CHROME_VERSION"
-        
-        # Check if Chrome version is 115 or higher (new distribution method)
-        if [ "$CHROME_VERSION" -ge 115 ]; then
-          echo "Using new ChromeDriver distribution for Chrome $CHROME_VERSION"
-          
-          # Get the latest driver version for this Chrome version
-          LATEST_DRIVER_VERSION=$(curl -s "https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_$CHROME_VERSION")
-          echo "Latest driver version: $LATEST_DRIVER_VERSION"
-          
-          # Download ChromeDriver from the new location
-          DOWNLOAD_URL="https://storage.googleapis.com/chrome-for-testing-public/$LATEST_DRIVER_VERSION/linux64/chromedriver-linux64.zip"
-          echo "Downloading from: $DOWNLOAD_URL"
-          curl -L -o /tmp/chromedriver.zip "$DOWNLOAD_URL"
-          
-          # Extract with the new directory structure
-          unzip -o /tmp/chromedriver.zip -d /tmp
-          
-          # Move the binary to the right locations
-          chmod +x /tmp/chromedriver-linux64/chromedriver
-          cp /tmp/chromedriver-linux64/chromedriver ~/.cache/chromedriver/
-          sudo mv /tmp/chromedriver-linux64/chromedriver /usr/local/bin/
-        else
-          echo "Using legacy ChromeDriver distribution for Chrome $CHROME_VERSION"
-          
-          # Get matching ChromeDriver version (legacy method)
-          CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          echo "Matching ChromeDriver version: $CHROMEDRIVER_VERSION"
-          
-          if [ -z "$CHROMEDRIVER_VERSION" ]; then
-            echo "Failed to get ChromeDriver version. Using latest stable version instead."
-            CHROMEDRIVER_VERSION=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE")
-            echo "Using latest stable ChromeDriver: $CHROMEDRIVER_VERSION"
-          fi
-          
-          # Download and install ChromeDriver (legacy method)
-          echo "Downloading ChromeDriver version $CHROMEDRIVER_VERSION..."
-          curl -L -o /tmp/chromedriver.zip "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
-          
-          # Extract and install
-          unzip -o /tmp/chromedriver.zip -d /tmp
-          chmod +x /tmp/chromedriver
-          cp /tmp/chromedriver ~/.cache/chromedriver/
-          sudo mv /tmp/chromedriver /usr/local/bin/
-        fi
-        
-        # Verify cache directory has content
-        echo "Cache directory contents:"
-        ls -la ~/.cache/chromedriver/
-        
-        # Verify installation
-        echo "Verifying ChromeDriver installation..."
-        chromedriver --version || echo "ChromeDriver installation failed"
-    
+        python-version: '3.13'
+
+    - name: Install uv
+      run: pip install uv
+
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        # Install NumPy first to ensure compatibility
-        pip install numpy==1.24.3
-        # Install pandas with a compatible version
-        pip install pandas==2.0.3
-        # Install other dependencies from requirements.txt
-        if [ -f requirements.txt ]; then 
-          # Skip numpy and pandas in requirements.txt since we installed specific versions
-          grep -v "numpy\|pandas" requirements.txt > filtered_requirements.txt || touch filtered_requirements.txt
-          if [ -s filtered_requirements.txt ]; then
-            pip install -r filtered_requirements.txt
-          fi
-        fi
-        # Install Selenium explicitly if not in requirements
-        pip install selenium webdriver-manager
-    
+      run: uv sync --frozen --no-dev
+
     - name: Run ridership data collection
       run: |
-        # Add debugging information
         echo "Python version:"
-        python --version
-        echo "Installed packages:"
-        pip list
-        echo "Chrome version:"
-        google-chrome --version
-        echo "ChromeDriver version:"
-        chromedriver --version
-        
+        uv run python --version
+
         # Run with timeout and error handling
         echo "Starting ridership data collection..."
-        timeout 300s python -u ridership.py || {
+        timeout 300s uv run python -u ridership.py || {
           echo "Error: ridership.py failed or timed out after 5 minutes"
-          echo "Checking for error logs..."
-          if [ -f selenium_error.log ]; then
-            echo "Selenium error log content:"
-            cat selenium_error.log
-          fi
           exit 1
         }
-      
+
+    - name: Upload debug response on failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: debug-response
+        path: debug_response.json
+        if-no-files-found: ignore
+
     - name: Configure Git
       run: |
         git config --global user.name 'GitHub Actions Bot'
         git config --global user.email 'actions@github.com'
-        
+
     - name: Commit and push changes
       run: |
         git add NammaMetro_Ridership_Dataset.csv
