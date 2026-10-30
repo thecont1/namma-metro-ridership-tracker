@@ -89,7 +89,8 @@ if filename.exists():
     prior = pd.read_csv(filename)
     prior = prior[prior['Record Date'] == record_date].tail(1)
 for col in EXPECTED_COLUMNS:
-    if col not in day_record.columns:
+    is_missing = col not in day_record.columns or pd.isna(day_record[col].iloc[0])
+    if is_missing:
         if not prior.empty and col in prior.columns and pd.notna(prior[col].iloc[0]):
             day_record[col] = prior[col].iloc[0]
         else:
