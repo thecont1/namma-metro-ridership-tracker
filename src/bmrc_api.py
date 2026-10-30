@@ -52,6 +52,13 @@ _NORM_FIELD_MAP = {
     re.sub(r"[^a-z0-9]", "", k.lower()): k for k in FIELD_MAP
 }
 
+# Canonical columns a usable record must map — shared contract with
+# ridership.py / ridership_1data.ipynb. A record missing any of these
+# means the fetch failed, not that ridership was 0.
+REQUIRED_COLUMNS = [
+    "Record Date", "Total Smart Cards", "Total Tokens", "Total QR",
+]
+
 # Variable-name ladder, most specific first
 _KEY_VAR_PATTERNS = [
     r"API_KEY", r"api_key", r"apiKey", r"APIKEY",
@@ -145,8 +152,11 @@ def _try(url, key, timeout):
     except (ValueError, urllib.error.URLError, TimeoutError) as e:
         return None, type(e).__name__
     rec = _first_record(payload)
-    if rec is not None and not map_record(rec):
-        rec = None  # parsed, but maps to no canonical column — keep trying
+    if rec is None:
+        return None, "no record in response"
+    missing = [f for f in REQUIRED_COLUMNS if f not in map_record(rec)]
+    if missing:
+        return None, f"missing required: {missing}"
     return rec, "ok"
 
 
@@ -184,9 +194,15 @@ def fetch_ridership(page_url=PAGE_URL, timeout=30, budget=270, reserve=20):
         # what a request may use while still leaving `reserve` for fallback
         return min(timeout, max(left() - reserve, 0.5))
 
-    html = _get(page_url, timeout=req_timeout())
-    srcs = _script_urls(html, page_url)
-    srcs.sort(key=lambda s: 0 if "ridership" in s else 1)
+    try:
+        html = _get(page_url, timeout=req_timeout())
+        srcs = _script_urls(html, page_url)
+        srcs.sort(key=lambda s: 0 if "ridership" in s else 1)
+    except Exception as e:  # noqa: BLE001
+        # page down doesn't mean the API is — continue to the
+        # unauthenticated fallback with no discovered bundles
+        attempts.append(f"page {page_url}: {type(e).__name__}")
+        srcs = []
 
     # walk bundles: ridership chunk first, extract port/paths/keys
     budget_hit = False

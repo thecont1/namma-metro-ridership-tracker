@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.bmrc_api import fetch_ridership, map_record, PAGE_URL
+from src.bmrc_api import fetch_ridership, map_record, PAGE_URL, REQUIRED_COLUMNS
 
 # Set up logging
 logging.basicConfig(
@@ -27,11 +27,6 @@ EXPECTED_COLUMNS = [
     'Total Tokens', 'Total NCMC', 'Group Ticket',
     'Total QR', 'QR NammaMetro', 'QR WhatsApp', 'QR Paytm', 'QR ONDC'
 ]
-
-# These must actually be present in the API response for a run to be
-# valid; missing values here mean the fetch failed, not that ridership
-# was 0.
-REQUIRED_COLUMNS = ['Record Date', 'Total Smart Cards', 'Total Tokens', 'Total QR']
 
 # Self-healing fetch: the site's API config (key, port, endpoint path)
 # is re-discovered from whatever JS bundle is currently deployed, so
@@ -68,6 +63,11 @@ logger.info(f"Found record date: {record_date}")
 day_record = {col: [mapped[col]] for col in EXPECTED_COLUMNS if col in mapped}
 day_record = pd.DataFrame(day_record)
 
+# Locate CSV file in the same directory as the script (needed below for
+# prior-value reuse and later for appending)
+script_dir = Path(__file__).parent
+filename = script_dir / "NammaMetro_Ridership_Dataset.csv"
+
 # Require the date and core columns to be present before filling
 # defaults — otherwise the zero-fill below makes a failed fetch look
 # valid and writes an all-zero row.
@@ -81,10 +81,19 @@ if missing_required:
     logger.error(f"Required columns missing from API response: {missing_required}. Refusing to write CSV.")
     exit(1)
 
-# Ensure all expected columns exist and are in canonical order
+# Ensure all expected columns exist and are in canonical order. When the
+# API omits an optional column, reuse the prior non-null value stored
+# for the same record date before defaulting to zero.
+prior = pd.DataFrame()
+if filename.exists():
+    prior = pd.read_csv(filename)
+    prior = prior[prior['Record Date'] == record_date].tail(1)
 for col in EXPECTED_COLUMNS:
     if col not in day_record.columns:
-        day_record[col] = 0
+        if not prior.empty and col in prior.columns and pd.notna(prior[col].iloc[0]):
+            day_record[col] = prior[col].iloc[0]
+        else:
+            day_record[col] = 0
 day_record = day_record[EXPECTED_COLUMNS]
 
 logger.info("Data row collected:   \n")
@@ -92,9 +101,6 @@ logger.info("Data row collected:   \n")
 print(day_record.to_string(index=False))
 print()
 
-# Locate CSV file in the same directory as the script
-script_dir = Path(__file__).parent
-filename = script_dir / "NammaMetro_Ridership_Dataset.csv"
 logger.info(f"CSV file path: {filename}")
 
 # Check if we have valid data before proceeding
