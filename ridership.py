@@ -49,6 +49,10 @@ EXPECTED_COLUMNS = [
     'Total QR', 'QR NammaMetro', 'QR WhatsApp', 'QR Paytm', 'QR ONDC'
 ]
 
+# These must actually be parsed from the page for a run to be valid;
+# missing values here mean the scrape failed, not that ridership was 0.
+REQUIRED_COLUMNS = ['Record Date', 'Total Smart Cards', 'Total Tokens', 'Total QR']
+
 # Dictionary to store ridership data
 day_record = {}
 
@@ -120,6 +124,19 @@ try:
     if 'Tokens' in day_record.columns:
         day_record.rename(columns={'Tokens':'Total Tokens'}, inplace=True)
     
+    # Require the date and core columns to have been parsed before filling
+    # defaults — otherwise the zero-fill below makes a failed scrape look
+    # valid and writes an all-zero row.
+    missing_required = [
+        col for col in REQUIRED_COLUMNS
+        if col not in day_record.columns
+        or pd.isna(day_record[col].iloc[0])
+        or day_record[col].iloc[0] == ''
+    ]
+    if missing_required:
+        logger.error(f"Required columns missing from page: {missing_required}. Refusing to write CSV.")
+        exit(1)
+
     # Ensure all expected columns exist and are in canonical order
     for col in EXPECTED_COLUMNS:
         if col not in day_record.columns:
